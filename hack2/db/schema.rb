@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140110212514) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "charities", force: true do |t|
     t.string   "name"
     t.text     "img"
@@ -32,6 +35,6 @@ ActiveRecord::Schema.define(version: 20140110212514) do
     t.string   "name"
   end
 
-  add_index "products", ["charity_id"], name: "index_products_on_charity_id"
+  add_index "products", ["charity_id"], name: "index_products_on_charity_id", using: :btree
 
 end
