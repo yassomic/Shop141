@@ -20,3 +20,6 @@ backpack = compassion.products.create(name: "Herschel Backpack", description: "H
 
 puts "Created Herschel Backpack!"
 
+shoe = compassion.products.create(name: "New Balance M997GY Reissue", description: "Originally released in 1991, New Balance recently decided to re-release its highly sought-after 997 silhouette. Constructed from a combination premium suede, pebbled leather and mesh, the brand’s nostalgic release features a tonal grey upper which rests atop the dependable ENCAP sole unit.", img: "http://www.highsnobiety.com/files/2014/01/new-balance-m997gy-reissue-01-960x640.jpg", price: 130)
+
+puts "New Balance M997GY Reissue"
