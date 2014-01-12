@@ -1,0 +1,176 @@
+/*********** page-wide *************/
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+@import url(http://fonts.googleapis.com/css?family=Arvo);
+
+.background {
+  background: url(uganda_travel-1.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  height: 800px;
+}
+
+/****** home-page *********/
+.logo {
+  width: 330px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  padding-top: 6%;
+}
+.banner {
+  padding-top: 80px;
+  height: 270px;
+  width: 100%;
+}
+
+.bancon {
+  position: relative;
+
+}
+
+.bannerdiv {
+  position: absolute;
+  text-align: center;
+}
+
+.text {
+  z-index: 100;
+  color: white;
+  margin-top: -160px;
+  font-family: Arvo;
+  font-size: 40px;
+  color: #EAEBE7;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+
+/****** products-page ********/
+
+.productspage {
+  height: 1000px;
+  background-color: #EAEBE7;
+}
+
+.toppad {
+  height: 100px;
+}
+
+.card {
+  height: 450px;
+  width: 400px;
+  border: 1px solid rgb(153, 153, 153);
+  background-color: white;
+}
+.productimagediv {
+  height: 300px;
+  width: 290px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  /*border: 1px solid rgb(153, 153, 153);*/
+}
+
+.productimage {
+  width: 250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;  
+}
+
+.productimage2 {
+  padding-top: 60px;
+  width: 250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;  
+}
+
+.buttondiv {
+  /*border: 1px solid rgb(153, 153, 153);*/
+  margin-top: 50px;
+
+}
+
+.btn141 {
+  background-color: #22B4CC;
+  margin-left: 4.5%;
+  width: 45%;
+  font-family: Oswald;
+}
+.btnBUY {
+  background-color: #5DF9AE;
+  width: 45%;
+  font-family: Oswald;
+}
+
+.pricediv {
+/*  border: 1px solid rgb(153, 153, 153);
+*/  height: 50px;
+  position: absolute;
+  width: 100px;
+  margin-top: 20px;
+  background-color: #FF5351;
+  text-align: center;
+}
+
+.price {
+  margin: auto;
+  padding-top: 10px;
+  color: white;
+  font-family: Oswald;
+  font-size: 20px;
+}
+
+/*NAV*/
+
+.menu {
+  background-color: #FF5351;
+  height: 100px;
+  width: 100%;
+
+}
+
+.menulogo {
+  font-family: Oswald;
+  color: #EAEBE7;
+  font-size: 40px;
+  padding-top: 20px;
+  padding-left: 200px;
+}
+
+.menulist {
+  list-style-type: none;
+  display: block;
+  padding-top: 35px;
+  padding-left: 100px;
+}
+
+.menulist li {
+  display: inline;
+  font-family: Oswald;
+  font-size: 20px;
+  margin-right: 40px;
+  color: #EAEBE7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

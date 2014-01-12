@@ -51,6 +51,10 @@ gem 'better_errors'
 
 gem 'foundation-rails'
 
+gem 'font-awesome-rails'
+
+
+
 # gem 'asin', '~> 1.0'
 # gem 'curb', '~> 0.8'
 # gem 'haml', '~> 3.1'

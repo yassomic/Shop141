@@ -48,6 +48,8 @@ GEM
     figaro (0.7.0)
       bundler (~> 1.0)
       rails (>= 3, < 5)
+    font-awesome-rails (4.0.3.1)
+      railties (>= 3.2, < 5.0)
     foundation-rails (5.0.2.0)
       railties (>= 3.1.0)
       sass (>= 3.2.0)
@@ -151,6 +153,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   faraday (~> 0.8.9)
   figaro
+  font-awesome-rails
   foundation-rails
   hirb
   jbuilder (~> 1.2)
