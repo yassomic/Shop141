@@ -1,0 +1,15 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: hack2-development
+  pool: 5
+  port: 5432
+  host: localhost
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: hack2-test
+  pool: 5
+  port: 5432
+  host: localhost
