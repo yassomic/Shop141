@@ -33,6 +33,10 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+group :development, :test do
+  gem "pry"
+end
+
 gem 'hirb'
 
 gem 'figaro'
@@ -44,6 +48,8 @@ gem 'unirest'
 gem 'vacuum', '~> 1.0.0'
 
 gem 'better_errors'
+
+gem 'foundation-rails'
 
 # gem 'asin', '~> 1.0'
 # gem 'curb', '~> 0.8'

@@ -16,10 +16,10 @@ compassion = Charity.create({name: "Compassion International", img: "http://drib
 
 puts "Created charity Compassion-International"
 
-backpack = compassion.products.create(name: "Herschel Backpack", description: "Herschel Supply Co. manufactures the finest quality bags, backpacks, and travel accessories, Herschel manufactures well-made goods with timeless styles, various patterns, and basic and trending colors.", img: "http://www.highsnobiety.com/news/wp-content/uploads/2011/04/Herschel-Supply-Co.-x-Stussy-Co.-Backpacks-00.jpg", price: 90)
+backpack = compassion.products.create(name: "Herschel Backpack", description: "Herschel Supply Co. manufactures the finest quality bags, backpacks, and travel accessories, Herschel manufactures well-made goods with timeless styles, various patterns, and basic and trending colors.", img: "http://www.highsnobiety.com/news/wp-content/uploads/2011/04/Herschel-Supply-Co.-x-Stussy-Co.-Backpacks-00.jpg", item_id: 'B0077BZ6GI')
 
 puts "Created Herschel Backpack!"
 
-shoe = compassion.products.create(name: "New Balance M997GY Reissue", description: "Originally released in 1991, New Balance recently decided to re-release its highly sought-after 997 silhouette. Constructed from a combination premium suede, pebbled leather and mesh, the brand’s nostalgic release features a tonal grey upper which rests atop the dependable ENCAP sole unit.", img: "http://www.highsnobiety.com/files/2014/01/new-balance-m997gy-reissue-01-960x640.jpg", price: 130)
+shoe = compassion.products.create(name: "Stolzle Glencairn Whiskey Glass ", description: "In the long and illustrious history of whisky, there has never been a single definitive glass that the whisky world could call its own. Wine, Champagne, Brandy, each has its own recognizable glass associated with it.", img: "http://ecx.images-amazon.com/images/I/41YZou-ZgnL._SY300_.jpg", item_id: 'B003TMCNI8')
 
-puts "New Balance M997GY Reissue"
+puts "New whiskey glass!"
