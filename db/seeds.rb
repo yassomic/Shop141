@@ -16,10 +16,10 @@ compassion = Charity.create({name: "Compassion International", img: "http://drib
 
 puts "Created charity Compassion-International"
 
-backpack = compassion.products.create(name: "Herschel Backpack", description: "Herschel Supply Co. manufactures the finest quality bags, backpacks, and travel accessories, Herschel manufactures well-made goods with timeless styles, various patterns, and basic and trending colors.", img: "http://www.highsnobiety.com/news/wp-content/uploads/2011/04/Herschel-Supply-Co.-x-Stussy-Co.-Backpacks-00.jpg", item_id: 'B0077BZ6GI')
+backpack = compassion.products.create(description: "Herschel Supply Co. manufactures the finest quality bags, backpacks, and travel accessories, Herschel manufactures well-made goods with timeless styles, various patterns, and basic and trending colors.", item_id: 'B0077BZ6GI')
 
 puts "Created Herschel Backpack!"
 
-glass = compassion.products.create(name: "Stolzle Glencairn Whiskey Glass ", description: "In the long and illustrious history of whisky, there has never been a single definitive glass that the whisky world could call its own. Wine, Champagne, Brandy, each has its own recognizable glass associated with it.", img: "http://ecx.images-amazon.com/images/I/41YZou-ZgnL._SY300_.jpg", item_id: 'B003TMCNI8')
+glass = compassion.products.create(description: "In the long and illustrious history of whisky, there has never been a single definitive glass that the whisky world could call its own. Wine, Champagne, Brandy, each has its own recognizable glass associated with it.", item_id: 'B003TMCNI8')
 
 puts "New whiskey glass!"

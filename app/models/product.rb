@@ -18,7 +18,7 @@ class Product < ActiveRecord::Base
 
     params = {
       'IdType'        => 'ASIN',
-      'ItemId'        => 'item_id',
+      'ItemId'        => item_id,
       'ResponseGroup' => 'Offers, Images'
     }
 
@@ -26,24 +26,23 @@ class Product < ActiveRecord::Base
     res = req.item_lookup(params)
     hash = res.to_h
     self.price = hash["ItemLookupResponse"]["Items"]["Item"]["Offers"]["Offer"]["OfferListing"]["Price"]["FormattedPrice"]
-    self.save
 
   #For Product Picture 
     res = req.item_lookup(params)
     hash = res.to_h 
     self.img = hash["ItemLookupResponse"]["Items"]["Item"]["LargeImage"]["URL"]
-    self.save
+ 
 
     params = {
       'IdType'        => 'ASIN',
-      'ItemId'        => 'B003TMCNI8',
+      'ItemId'        => item_id,
     }
 
   #For Amazon URL
     res = req.item_lookup(params)
     hash = res.to_h
     self.amazonUrl = hash["ItemLookupResponse"]["Items"]["Item"]["ItemLinks"]["ItemLink"][0]["URL"]
-    self.save
+ 
 
   #For Product Title
     res = req.item_lookup(params)
