@@ -8,7 +8,7 @@
       
      <tr>
      <td><%= product.name %> <%""%> <%= product.price %></td>
-     <td><img width='300' height='300' src=<%= product.img %> </td>
+     <td><%=link_to image_tag(product.img), product_path(product) %></td>
      </tr>
     <% end %>
 
