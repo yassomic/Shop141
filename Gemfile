@@ -46,6 +46,9 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'guard-rspec'
   gem 'database_cleaner'
+  # gem 'vcr'
+  # gem 'webmock'
+  # gem 'excon'
 end
 
 gem 'figaro'
