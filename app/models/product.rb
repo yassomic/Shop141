@@ -3,7 +3,7 @@ class Product < ActiveRecord::Base
 
   after_create :product_query
 
-
+ #method cals the Amazon API
  def product_query
     req = Vacuum.new 
     req.configure(
