@@ -1,6 +1,7 @@
 class Product < ActiveRecord::Base
-  belongs_to :charity
 
+  belongs_to :charity
+  
   after_create :product_query
 
  #method cals the Amazon API
