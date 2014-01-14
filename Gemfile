@@ -43,16 +43,14 @@ group :development, :test do
   gem 'pry-plus'
   gem 'pry-rails'
   gem 'hirb'
+  gem 'rspec-rails'
+  gem 'guard-rspec'
 end
 
 gem 'figaro'
-
 gem 'faraday', '~> 0.8.9'
-
 gem 'unirest'
-
 gem 'vacuum', '~> 1.0.0'
-
 gem 'foundation-rails'
 
 # gem 'asin', '~> 1.0'
