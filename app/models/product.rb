@@ -28,18 +28,23 @@ class Product < ActiveRecord::Base
 
   #For Price  
     res = req.item_lookup(params)
-    hash = res.to_h
-    hash2 = hash["ItemLookupResponse"]
-    array = hash2.to_a
-    array2 = array[2]
-    hash3 = array2[1].to_h
-    hash4 = hash3["Item"]
-    hash5 = hash4["Offers"]
-    hash6 = hash5["Offer"]
-    hash7 = hash6["OfferListing"]
-    hash8 = hash7["Price"]
-    self.price = hash8["Amount"].to_d/100.to_f
-    self.save
+
+    doc = res
+
+    price = doc.search('Price').map{ |price|}
+
+    # hash = res.to_h
+    # hash2 = hash["ItemLookupResponse"]
+    # array = hash2.to_a
+    # array2 = array[2]
+    # hash3 = array2[1].to_h
+    # hash4 = hash3["Item"]
+    # hash5 = hash4["Offers"]
+    # hash6 = hash5["Offer"]
+    # hash7 = hash6["OfferListing"]
+    # hash8 = hash7["Price"]
+    # self.price = hash8["Amount"].to_d/100.to_f
+    # self.save
 
  #For Title
     # binding.pry

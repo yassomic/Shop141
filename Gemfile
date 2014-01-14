@@ -53,6 +53,8 @@ gem 'foundation-rails'
 
 gem 'font-awesome-rails'
 
+gem 'nokogiri'
+
 
 
 # gem 'asin', '~> 1.0'
