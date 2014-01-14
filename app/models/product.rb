@@ -1,4 +1,4 @@
-rclass Product < ActiveRecord::Base
+class Product < ActiveRecord::Base
 
   belongs_to :charity
   
@@ -52,4 +52,5 @@ rclass Product < ActiveRecord::Base
     self.save
 
   end
+
 end
