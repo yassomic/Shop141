@@ -45,6 +45,7 @@ group :development, :test do
   gem 'hirb'
   gem 'rspec-rails'
   gem 'guard-rspec'
+  gem 'database_cleaner'
 end
 
 gem 'figaro'
