@@ -1,4 +1,4 @@
-class Product < ActiveRecord::Base
+rclass Product < ActiveRecord::Base
 
   belongs_to :charity
   

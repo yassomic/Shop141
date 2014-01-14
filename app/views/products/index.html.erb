@@ -27,14 +27,15 @@
   <div class="row">
     <div class="cardscontainer">
 
+    <% @products.each do |product| %>
 
       <div class="small-5 columns">
         <div class="card">
           <div class="pricediv">
-            <p class="price">$90</p>
+            <p class="price">product.price</p>
           </div>
           <div class="productimagediv">
-            <%= image_tag("herschel-backpacks-5.jpg", :class => "productimage") %> 
+            <%= image_tag(product.img, :class => "productimage") %> 
           </div>
           <div class="buttondiv">
             <a href="#" class="button btn141 fa fa-usd"> BUY 141</a>
@@ -81,19 +82,3 @@
 
 
 
-<!-- <h1>Shop 141</h1>
-	
-<table>
-  <thead>
-  </thead>
-    <tr>
-    <% @products.each do |product| %>
-      
-     <tr>
-     <td><%= product.name %> <%""%> <%= product.price %></td>
-     <td><img width='300' height='300' src=<%= product.img %> </td>
-     </tr>
-    <% end %>
-
-  </tbody>
-</table> -->
