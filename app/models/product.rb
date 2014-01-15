@@ -56,13 +56,10 @@ class Product < ActiveRecord::Base
 
  def set_url
   @url_res = @req.item_lookup(@title_url_params)
-  hash = @res.to_h
+  hash = @url_res.to_h
   self.amazonUrl = hash["ItemLookupResponse"]["Items"]["Item"]["ItemLinks"]["ItemLink"][0]["URL"]
   self.save
  end
-
-
-
 
  # def product_query
  #    req = Vacuum.new 

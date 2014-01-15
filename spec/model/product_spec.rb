@@ -13,7 +13,6 @@ describe Product do
 
   end
 
-
   context 'when given a valid item_id' do
     let(:product) do
       Product.create \
@@ -32,6 +31,10 @@ describe Product do
       expect(product.img).to eq 'http://ecx.images-amazon.com/images/I/41WK5jdfIQL.jpg'
     end
 
+    it 'contains a url' do
+      expect(product.amazonUrl).not_to be_empty
+    end
+    
   end
 
 end
