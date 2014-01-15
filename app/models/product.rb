@@ -5,7 +5,7 @@ class Product < ActiveRecord::Base
   # after_create :product_query
   after_create :configure_item, :set_title_url_params, :set_price_pic_params, :set_title, :set_price, :set_picture, :set_url
 
- #method cals the Amazon API
+ #method calls the Amazon API
 
  def configure_item
   @req = Vacuum.new 
