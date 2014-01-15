@@ -22,4 +22,8 @@ puts "Created Herschel Backpack!"
 
 glass = compassion.products.create(description: "In the long and illustrious history of whisky, there has never been a single definitive glass that the whisky world could call its own. Wine, Champagne, Brandy, each has its own recognizable glass associated with it.", item_id: 'B003TMCNI8')
 
-puts "New whiskey glass!"
+puts "Created whiskey glass!"
+
+kindfire HD = compassion.products.create(description: "The new Kindle Fire HD is a full-featured HD tablet at an SD price. There's more to enjoy than ever before with a stunning HD display, faster performance, longer battery life, and lighter design.", item_id: 'B00CU0NSCU')
+
+puts "Created kindlefire HD!"

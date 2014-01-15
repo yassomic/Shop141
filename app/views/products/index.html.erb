@@ -1,16 +1,36 @@
-<h1>Shop 141</h1>
-	
-<table>
-  <thead>
-  </thead>
-    <tr>
+
+  <div class="row">
+    <!-- <div class="cardscontainer"> -->
+
     <% @products.each do |product| %>
-      
-     <tr>
-     <td><%= product.name %> <%""%> <%= product.price %></td>
-     <td><%=link_to image_tag(product.img), product_path(product) %></td>
-     </tr>
+
+      <div class="large-4 columns">
+        <div class="card">
+          <div class="pricediv">
+            <p class="price"><%= product.price %></p>
+          </div>
+          <div class="productimagediv">
+            <%= link_to image_tag(product.img), product_path(product), :class => "productimage" %> 
+          </div>
+          <div class="buttondiv">
+            <a href="#" class="button btn141 fa fa-usd"> BUY 141</a>
+            <a href="#" class="button btnBUY fa fa-usd"> PURCHASE</a>
+          </div>
+        </div>
+      </div>
     <% end %>
 
-  </tbody>
-</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

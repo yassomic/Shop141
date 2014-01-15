@@ -1,9 +1,10 @@
 class Product < ActiveRecord::Base
-  belongs_to :charity
 
+  belongs_to :charity
+  
   after_create :product_query
 
-
+ #method cals the Amazon API
  def product_query
     req = Vacuum.new 
     req.configure(
@@ -24,6 +25,7 @@ class Product < ActiveRecord::Base
 
   #For Product Price  
     res = req.item_lookup(params)
+
     hash = res.to_h
     self.price = hash["ItemLookupResponse"]["Items"]["Item"]["Offers"]["Offer"]["OfferListing"]["Price"]["FormattedPrice"]
 
@@ -51,4 +53,5 @@ class Product < ActiveRecord::Base
     self.save
 
   end
+
 end

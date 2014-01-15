@@ -43,17 +43,25 @@ group :development, :test do
   gem 'pry-plus'
   gem 'pry-rails'
   gem 'hirb'
+  gem 'rspec-rails'
+  gem 'guard-rspec'
+  gem 'database_cleaner'
+  # gem 'vcr'
+  # gem 'webmock'
+  # gem 'excon'
 end
 
 gem 'figaro'
-
 gem 'faraday', '~> 0.8.9'
-
 gem 'unirest'
-
 gem 'vacuum', '~> 1.0.0'
-
 gem 'foundation-rails'
+
+gem 'font-awesome-rails'
+
+gem 'nokogiri'
+
+
 
 # gem 'asin', '~> 1.0'
 # gem 'curb', '~> 0.8'
