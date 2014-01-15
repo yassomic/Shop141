@@ -1,15 +1,24 @@
-# module AmazonSimplePayHelper
+module AmazonSimplePayHelper
 
-# <form action="https://authorize.payments-sandbox.amazon.com/pba/paypipeline" method="post">
-#   <input type="hidden" name="description" value="Test" >
-#   <input type="hidden" name="returnUrl" value="http://localhost:3000/confirm_payment" >
-#   <input type="hidden" name="processImmediate" value="1" >
-#   <input type="hidden" name="accessKey" value="11SEM03K88SD016FS1G2" >
-#   <input type="hidden" name="collectShippingAddress" value="0" >
-#   <input type="hidden" name="isDonationWidget" value="0" >
-#   <input type="hidden" name="amazonPaymentsAccountId" value="KGUTDYUMSHCR37MU87XV574LU87EL18UEACDRA" >
-#   <input type="hidden" name="cobrandingStyle" value="logo" >
-#   <input type="hidden" name="immediateReturn" value="1" >
-#   <input type="hidden" name="amount" value="USD 5.00" >
-#   <input type="image" src="http://g-ecx.images-amazon.com/images/G/01/asp/beige_medium_paynow_withlogo_whitebg.gif" border="0">
-# </form>
+  AMAZON_ACCESS_KEY = 'AKIAJP4O3CBZB7QOLM3A'
+
+  AMAZON_PAYMENTS_ACCOUNT_ID = 'KGUTDYUMSHCR37MU87XV574LU87EL18UEACDRA'
+
+  def amazon_simple_pay_form_tag(options = {}, &block)
+    sandbox = '-sandbox' unless Rails.env == 'production'
+    pipeline_url = "https://authorize.payments#{sandbox}.amazon.com/pba/paypipeline" 
+    html_options = { :action => pipeline_url, :method => :post }.merge(options)
+    content = capture(&block)
+    output = ActiveSupport::SafeBuffer.new
+    output.safe_concat(tag(:form, html_options, true))
+    output << content
+    output.safe_concat(hidden_field_tag('accessKey', AMAZON_ACCESS_KEY))
+    output.safe_concat(hidden_field_tag('amazonPaymentsAccountId', AMAZON_PAYMENTS_ACCOUNT_ID))
+    output.safe_concat(hidden_field_tag('immediateReturn', '1'))
+    output.safe_concat(hidden_field_tag('processImmediate', '1'))
+    output.safe_concat(hidden_field_tag('cobrandingStyle', 'logo'))
+    output.safe_concat(hidden_field_tag('returnUrl', confirm_payment_url))
+    output.safe_concat("</form>")
+  end
+
+end

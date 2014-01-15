@@ -2,13 +2,16 @@ class PaymentsController < ApplicationController
   before_action :set_payment, only: [:show, :edit, :update, :destroy]
 
 
+
+
   def confirm
     @payment = Payment.new(
       :transaction_amount => params[:transactionAmount],
       :transaction_id     => params[:transactionId]
     )
     if @payment.save
-      redirect_to(@payment, :notice => 'Payment was successfully created.')
+      redirect_to "http://www.amazon.com/Herschel-Supply-Co-Little-America/dp/B0077BZ6GI/ref=sr_1_2?ie=UTF8&qid=1389825647&sr=8-2&keywords=herschel+backpack"
+      # redirect_to(@payment, :notice => 'Payment was successfully created.')
     else
       redirect_to :action => "index"
     end
