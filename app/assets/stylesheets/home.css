@@ -1,51 +1,3 @@
-/*********** page-wide *************/
-@import url(http://fonts.googleapis.com/css?family=Oswald);
-@import url(http://fonts.googleapis.com/css?family=Arvo);
-
-.background {
-  background: url(uganda_travel-1.jpg) no-repeat center center; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  height: 800px;
-}
-
-.logo {
-  width: 330px;
-  margin-right: auto;
-  margin-left: auto;
-  display: block;
-  padding-top: 6%;
-}
-.banner {
-  padding-top: 80px;
-  height: 270px;
-  width: 100%;
-}
-
-.bancon {
-  position: relative;
-
-}
-
-.bannerdiv {
-  position: absolute;
-  text-align: center;
-}
-
-.text {
-  z-index: 100;
-  color: white;
-  margin-top: -160px;
-  font-family: Arvo;
-  font-size: 40px;
-  color: #EAEBE7;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-
 
 /****** products-page ********/
 
@@ -59,10 +11,13 @@
 }
 
 .card {
-  height: 550px;
-  width: 600px;
+  height: 500px;
+  width: 500px;
   border: 3px solid rgb(153, 153, 153);
   background-color: white;
+  float: left;
+  margin-left: 15%;
+
 }
 .productimagediv {
   height: 400px;
@@ -75,20 +30,22 @@
 }
 
 .productimage {
-  width: 450px;
-  display: inline-block;
-  margin-left: auto;
+  width: 300px;
+  height: 300px;
+  display: block;
+/*  float: left;*/
+/*  margin-left: auto;
   margin-right: auto;
-  text-align: center; 
+  text-align: center;*/ 
 }
-
+/*
 .productimage2 {
   padding-top: 60px;
   width: 250px;
   display: block;
   margin-left: auto;
   margin-right: auto;  
-}
+}*/
 
 .buttondiv {
   /*border: 1px solid rgb(153, 153, 153);*/
@@ -126,37 +83,7 @@
   font-size: 20px;
 }
 
-/*NAV*/
 
-.menu {
-  background-color: #FF5351;
-  height: 100px;
-  width: 100%;
-
-}
-
-.menulogo {
-  font-family: Oswald;
-  color: #EAEBE7;
-  font-size: 40px;
-  padding-top: 20px;
-  padding-left: 200px;
-}
-
-.menulist {
-  list-style-type: none;
-  display: block;
-  padding-top: 35px;
-  padding-left: 100px;
-}
-
-.menulist li {
-  display: inline;
-  font-family: Oswald;
-  font-size: 20px;
-  margin-right: 40px;
-  color: #EAEBE7;
-}
 
 
 

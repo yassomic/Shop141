@@ -1,31 +1,19 @@
 
-  <div class="row">
-    <!-- <div class="cardscontainer"> -->
 
-    <% @products.each do |product| %>
-      <div class="large-2 columns">
-      </div>
-      <div class="large-4 columns">
-        <div class="card">
-          <div class="pricediv">
-            <p class="price"><%= product.price %></p>
-          </div>
-          <div class="productimagediv" style="text-align: center">
-            <%= link_to image_tag(product.img), product_path(product), :class => "productimage" %> 
-          </div>
+  <% @products.each do |product| %>
+
+      <div class="card">
+        <div class="pricediv">
+          <p class="price"><%= product.price %></p>
+        </div>
+        <div class="productimagediv" style="text-align: center">
+          <%= link_to image_tag(product.img), product_path(product), :class => "productimage" %> 
         </div>
       </div>
-<!--       <div class="large-2 columns">
-      </div> -->
-    <% end %>
 
 
-
-
-
-
-
-
+    
+  <% end %>
 
 
 
