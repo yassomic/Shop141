@@ -5,7 +5,10 @@ Hack2::Application.routes.draw do
   get "/products" => "products#index"
   get "/products/id" => "products#show_product"
 
-  resources :payments
+
+   resources :products 
     get 'confirm_payment' => 'payments#confirm'
-  resources :products 
+ 
+
+end
 

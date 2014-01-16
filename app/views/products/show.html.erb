@@ -10,6 +10,16 @@
           <div class="buttondiv">
             <%= link_to '<button class="button btn141 fa fa-usd" type="button">BUY 141</button>'.html_safe, @product.amazonUrl %>
             <%= link_to '<button class="button btnBUY fa fa-usd" type="button">PURCHASE</button>'.html_safe, @product.amazonUrl %>
+
+            
+            <%= amazon_simple_pay_form_tag do %>
+              <%= hidden_field_tag(:amount, @product.price.tr('$', '').to_f) %><br/><br/>
+              <%= hidden_field_tag 'referenceId', @product.id %>
+              <%= hidden_field_tag 'description', 'something else' %>
+              <%= image_submit_tag('/images/pay_me.gif') %>
+            <% end %>
+
+
           </div>
         </div>
       </div>

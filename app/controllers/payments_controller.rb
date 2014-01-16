@@ -5,17 +5,16 @@ class PaymentsController < ApplicationController
 
 
   def confirm
-    
-    @payment = Product.payment.create("")
-
-
-    @payment = Payment.new(
+    @product = Product.find(params[:referenceId])
+    @payment = @product.payments.new(
       :transaction_amount => params[:transactionAmount],
       :transaction_id     => params[:transactionId]
     )
+    @payment.save
+
     if @payment.save
 
-      redirect_to @payment.product.url#"http://www.amazon.com/Herschel-Supply-Co-Little-America/dp/B0077BZ6GI/ref=sr_1_2?ie=UTF8&qid=1389825647&sr=8-2&keywords=herschel+backpack"
+      redirect_to @payment.product.amazonUrl
       # redirect_to(@payment, :notice => 'Payment was successfully created.')
     else
       redirect_to :action => "index"

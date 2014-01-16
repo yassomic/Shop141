@@ -1,7 +1,5 @@
 
-<<<<<<< HEAD
 <div class="productspage">
-
 
   <div class="menu">
     
@@ -39,8 +37,6 @@
           <div class="productimagediv" style="text-align: center">
             <%= link_to image_tag(product.img), product_path(product), :class => "productimage" %> 
           </div>
-
-
             <%= amazon_simple_pay_form_tag do %>
               <%= hidden_field_tag(:amount, product.price.tr('$', '').to_f) %><br/><br/>
               <%= hidden_field_tag 'referenceId', 'something' %>
@@ -58,24 +54,7 @@
         <!-- padding -->
       </div>
 
-      <!-- <div class="small-5 columns">
-        <div class="card">
-          <div class="pricediv">
-            <p class="price">$50</p>
-          </div>
-          <div class="productimagediv">
-            <%= image_tag("whiskey2.jpg", :class => "productimage2") %> 
-          </div>
-          <div class="buttondiv">
-            <a href="#" class="button btn141 fa fa-usd"> BUY 141</a>
-            <a href="#" class="button btnBUY fa fa-usd"> PURCHASE</a>
-          </div>
-        </div>
-=======
-<!--       <div class="large-2 columns">
->>>>>>> ff44174d35f5800e085e89c86d85032bf2fcd783
-      </div> -->
-    <% end %>
+
 
 
 
