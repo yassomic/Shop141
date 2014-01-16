@@ -5,6 +5,10 @@ class PaymentsController < ApplicationController
 
 
   def confirm
+    
+    @payment = Product.payment.create("")
+
+
     @payment = Payment.new(
       :transaction_amount => params[:transactionAmount],
       :transaction_id     => params[:transactionId]

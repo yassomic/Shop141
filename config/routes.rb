@@ -7,4 +7,5 @@ Hack2::Application.routes.draw do
 
   resources :payments
     get 'confirm_payment' => 'payments#confirm'
-end
+  resources :products 
+

@@ -11,7 +11,6 @@
   height: 800px;
 }
 
-/****** home-page *********/
 .logo {
   width: 330px;
   margin-right: auto;
@@ -60,25 +59,27 @@
 }
 
 .card {
-  height: 450px;
-  width: 400px;
-  border: 1px solid rgb(153, 153, 153);
+  height: 550px;
+  width: 600px;
+  border: 3px solid rgb(153, 153, 153);
   background-color: white;
 }
 .productimagediv {
-  height: 300px;
+  height: 400px;
   width: 290px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
+  font-weight: bold;
   /*border: 1px solid rgb(153, 153, 153);*/
 }
 
 .productimage {
-  width: 250px;
-  display: block;
+  width: 450px;
+  display: inline-block;
   margin-left: auto;
-  margin-right: auto;  
+  margin-right: auto;
+  text-align: center; 
 }
 
 .productimage2 {
