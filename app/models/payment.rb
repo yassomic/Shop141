@@ -1,6 +1,7 @@
 class Payment < ActiveRecord::Base
   validates_presence_of :amount
   validates_presence_of :transaction_id
+  belongs_to :product
 
   def transaction_amount=(currency_and_amount)
     currency = parse(currency_and_amount).first

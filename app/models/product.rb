@@ -1,6 +1,7 @@
 class Product < ActiveRecord::Base
 
   belongs_to :charity
+  has_many :payments
   
   # after_create :product_query
   after_create :configure_item, :set_title_url_params, :set_price_pic_params, :set_title, :set_price, :set_picture, :set_url
