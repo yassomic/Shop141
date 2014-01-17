@@ -1,5 +1,17 @@
-<div><%= @product.name %></div>
-<div><%= @product.price %></div>
 
-<%= link_to image_tag(@product.img), @product.amazonUrl %>
+<div class="small-12 columns">
+  <div class="card">
+    <div class="pricediv">
+      <p class="price"><%= @product.price %></p>
+    </div>
+    <div class="productimagediv" style = "text-align: center">
+      <img src=<%= @product.img %> />
+    </div>
+    <div class="buttondiv">
+      <%= link_to '<button class="button btn141 fa fa-usd" type="button">BUY 141</button>'.html_safe, @product.amazonUrl %>
+      <%= link_to '<button class="button btnBUY fa fa-usd" type="button">PURCHASE</button>'.html_safe, @product.amazonUrl %>
+    </div>
+  </div>
+</div>
 
+    

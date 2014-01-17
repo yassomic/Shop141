@@ -1,81 +1,16 @@
 
-<div class="productspage">
 
+  <% @products.each do |product| %>
 
-  <div class="menu">
-    
-    <div class="small-5 columns">
-      <p class="menulogo"> SHOP141 </p>
-    </div>
-
-    <div class="small-7 columns">
-      <ul class="menulist">
-        <li>ABOUT</li>
-        <li>PRODUCTS</li>
-        <li>CHARITIES</li>
-      </ul>
-    </div>
-
-  </div>
-
-
-  <div class="row toppad">
-  </div> 
-
-
-
-  <div class="row">
-    <div class="cardscontainer">
-
-    <% @products.each do |product| %>
-
-      <div class="small-5 columns">
-        <div class="card">
-          <div class="pricediv">
-            <p class="price"><%= product.price %></p>
-          </div>
-          <div class="productimagediv">
-            <%= image_tag(product.img, :class => "productimage") %> 
-          </div>
-          <div class="buttondiv">
-            <a href="#" class="button btn141 fa fa-usd"> BUY 141</a>
-            <a href="#" class="button btnBUY fa fa-usd"> PURCHASE</a>
-          </div>
+      <div class="card">
+        <div class="pricediv">
+          <p class="price"><%= product.price %></p>
+        </div>
+        <div>
+          <%= link_to image_tag(product.img), product_path(product) %> 
         </div>
       </div>
-    <% end %>
-
-
-      <div class="small-2 columns">
-        <!-- padding -->
-      </div>
-
-      <!-- <div class="small-5 columns">
-        <div class="card">
-          <div class="pricediv">
-            <p class="price">$50</p>
-          </div>
-          <div class="productimagediv">
-            <%= image_tag("whiskey2.jpg", :class => "productimage2") %> 
-          </div>
-          <div class="buttondiv">
-            <a href="#" class="button btn141 fa fa-usd"> BUY 141</a>
-            <a href="#" class="button btnBUY fa fa-usd"> PURCHASE</a>
-          </div>
-        </div>
-      </div> -->
-
-    </div>
-  </div>
-
-
-</div>
-
-
-
-
-
-
+  <% end %>
 
 
 
