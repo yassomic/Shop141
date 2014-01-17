@@ -49,24 +49,16 @@
 }
 
 .bancon {
-  position: relative;
-
-}
-
-.bannerdiv {
-  position: absolute;
   text-align: center;
 }
 
 .text {
-  z-index: 100;
   color: white;
-  margin-top: -160px;
+  margin-top: -140px;
   font-family: Arvo;
   font-size: 40px;
   color: #EAEBE7;
-  margin-right: auto;
-  margin-left: auto;
+  line-height: 30px;
 }
 
 /*NAV*/
