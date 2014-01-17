@@ -1,6 +1,5 @@
 
 <div class="productspage">
-
   <div class="menu">
     
     <div class="small-5 columns">
@@ -17,11 +16,8 @@
 
   </div>
 
-
   <div class="row toppad">
   </div> 
-
-
 
   <div class="row">
     <!-- <div class="cardscontainer"> -->
@@ -41,15 +37,11 @@
               <%= hidden_field_tag(:amount, product.price.tr('$', '').to_f) %><br/><br/>
               <%= hidden_field_tag 'referenceId', 'something' %>
               <%= hidden_field_tag 'description', 'something else' %>
-              <%= image_submit_tag('/images/pay_me.gif') %>
+              <%= submit_tag('/images/pay_me.gif') %>
             <% end %>
         </div>
       </div>
     <% end %>
-
-
-
-
       <div class="small-2 columns">
         <!-- padding -->
       </div>
