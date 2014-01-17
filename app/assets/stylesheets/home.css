@@ -25,26 +25,49 @@
 
 .price {
   margin: auto;
-  padding-top: 10px;
+  padding-top: 17px;
   color: white;
   font-family: Oswald;
   font-size: 20px;
 }
 
 /********show-page*********/
+.card2 {
+  height: 650px;
+  /*width: 100%;*/
+  border: 3px solid rgb(153, 153, 153);
+  background-color: white;
+  margin-left: 30%;
+}
+
 .buttondiv {
   margin-top: 50px;
-
 }
 
 .btn141 {
-  background-color: #22B4CC;
+  background-color: #FF5351;
   margin-left: 4.5%;
   width: 45%;
   font-family: Oswald;
+  float: left;
 }
 .btnBUY {
-  background-color: #5DF9AE;
+  background-color: #22B4CC;
+  margin-left: 2.5%;
   width: 45%;
   font-family: Oswald;
+  float: left;
+  line-height: 22px;
+  /*font-weight: bold;*/
+}
+
+.description {
+  height: 650px;
+  /*border: 3px solid rgb(153, 153, 153);*/
+  /*background-color: white;*/
+  margin-right: 18%;
+  font-family: Oswald;
+  font-size: 40px;
+  line-height: 60px;
+  margin-left: 5%
 }
