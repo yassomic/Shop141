@@ -23,9 +23,9 @@
 .row {
   max-width: 100%;
 }
-.columns {
-  border: 1px solid green;
-}
+// .columns {
+//   border: 1px solid green;
+// }
 .background {
   background: url(uganda_travel-1.jpg) no-repeat center center; 
     -webkit-background-size: cover;
@@ -49,24 +49,16 @@
 }
 
 .bancon {
-  position: relative;
-
-}
-
-.bannerdiv {
-  position: absolute;
   text-align: center;
 }
 
 .text {
-  z-index: 100;
   color: white;
-  margin-top: -160px;
+  margin-top: -140px;
   font-family: Arvo;
   font-size: 40px;
   color: #EAEBE7;
-  margin-right: auto;
-  margin-left: auto;
+  line-height: 30px;
 }
 
 /*NAV*/
@@ -83,14 +75,15 @@
   color: #EAEBE7;
   font-size: 40px;
   padding-top: 20px;
-  text-align: center;
+  text-align: right;
+  padding-top: 35px;
 }
 
 .menulist {
   list-style-type: none;
   display: block;
   padding-top: 35px;
-  padding-left: 100px;
+  padding-left: 80px;
 }
 
 .menulist li {
