@@ -16,36 +16,12 @@
               <%= hidden_field_tag(:amount, @product.price.tr('$', '').to_f) %><br/><br/>
               <%= hidden_field_tag 'referenceId', @product.id %>
               <%= hidden_field_tag 'description', 'something else' %>
-              <%= image_submit_tag('/images/pay_me.gif') %>
+              <button class="button btn141" type="submit">BUY 141</button>
             <% end %> 
 
-            <%= form_tag(:action => 'https://authorize.payments-sandbox.amazon.com/pba/paypipeline') do %>
-              <%= hidden_field_tag(:amount, @product.price.tr('$', '').to_f) %>
-              <%= hidden_field_tag 'referenceId', @product.id %>
-              <%= hidden_field_tag 'description', 'something else' %>
-              <%= f.submit "Donate" %>
-            <% end %>
-
-
-
-
-            <form action="https://authorize.payments-sandbox.amazon.com/pba/paypipeline" method="post">
-              <input type="hidden" name="amount" value="USD 5.00" >
-              <input type="hidden" name="processImmediate" value="1" >
-              <input type="hidden" name="signatureMethod" value="HmacSHA256" >
-              <input type="hidden" name="accessKey" value="11SEM03K88SD016FS1G2" >
-              <input type="hidden" name="collectShippingAddress" value="0" >
-              <input type="hidden" name="isDonationWidget" value="0" >
-              <input type="hidden" name="description" value="Donate" >
-              <input type="hidden" name="amazonPaymentsAccountId" value="KGUTDYUMSHCR37MU87XV574LU87EL18UEACDRA" >
-              <input type="hidden" name="cobrandingStyle" value="logo" >
-              <input type="hidden" name="signatureVersion" value="2" >
-              <input type="hidden" name="immediateReturn" value="1" >
-              <input type="hidden" name="signature" value="P7NUnMOArSLST8/Uu9vqJ/yxuQCGFg0XvkJtG7nYXOg=" >
-              <input type="submit" value="Buy" class="button btn141" >
-            </form>
-
-
+    
+            
+    
           </div>
         </div>
       </div>
