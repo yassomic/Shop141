@@ -24,6 +24,6 @@ glass = compassion.products.create(description: "In the long and illustrious his
 
 puts "Created whiskey glass!"
 
-kindfire HD = compassion.products.create(description: "The new Kindle Fire HD is a full-featured HD tablet at an SD price. There's more to enjoy than ever before with a stunning HD display, faster performance, longer battery life, and lighter design.", item_id: 'B00CU0NSCU')
+# kindfire HD = compassion.products.create(description: "The new Kindle Fire HD is a full-featured HD tablet at an SD price. There's more to enjoy than ever before with a stunning HD display, faster performance, longer battery life, and lighter design.", item_id: 'B00CU0NSCU')
 
-puts "Created kindlefire HD!"
+# puts "Created kindlefire HD!"
