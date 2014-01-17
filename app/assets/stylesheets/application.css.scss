@@ -83,7 +83,7 @@
   color: #EAEBE7;
   font-size: 40px;
   padding-top: 20px;
-  padding-left: 200px;
+  text-align: center;
 }
 
 .menulist {
@@ -99,4 +99,14 @@
   font-size: 20px;
   margin-right: 40px;
   color: #EAEBE7;
+}
+
+// Body
+.bodybackground {
+  height: 1000px;
+  background-color: #EAEBE7;
+}
+
+.toppad {
+  height: 100px;
 }

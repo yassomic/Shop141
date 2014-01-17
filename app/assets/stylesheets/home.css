@@ -1,73 +1,21 @@
 
 /****** products-page ********/
 
-.productspage {
-  height: 1000px;
-  background-color: #EAEBE7;
-}
-
-.toppad {
-  height: 100px;
-}
-
 .card {
   height: 500px;
   width: 500px;
   border: 3px solid rgb(153, 153, 153);
   background-color: white;
   float: left;
-  margin-left: 15%;
-
-}
-.productimagediv {
-  height: 400px;
-  width: 290px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 30px;
-  font-weight: bold;
-  /*border: 1px solid rgb(153, 153, 153);*/
-}
-
-.productimage {
-  width: 300px;
-  height: 300px;
-  display: block;
-/*  float: left;*/
-/*  margin-left: auto;
-  margin-right: auto;
-  text-align: center;*/ 
-}
-/*
-.productimage2 {
-  padding-top: 60px;
-  width: 250px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;  
-}*/
-
-.buttondiv {
-  /*border: 1px solid rgb(153, 153, 153);*/
-  margin-top: 50px;
-
-}
-
-.btn141 {
-  background-color: #22B4CC;
-  margin-left: 4.5%;
-  width: 45%;
-  font-family: Oswald;
-}
-.btnBUY {
-  background-color: #5DF9AE;
-  width: 45%;
-  font-family: Oswald;
+  margin-left: 19%;
+  display: table;
+  text-align: center;
+  line-height: 600px;
 }
 
 .pricediv {
-/*  border: 1px solid rgb(153, 153, 153);
-*/  height: 50px;
+
+  height: 50px;
   position: absolute;
   width: 100px;
   margin-top: 20px;
@@ -83,22 +31,20 @@
   font-size: 20px;
 }
 
+/********show-page*********/
+.buttondiv {
+  margin-top: 50px;
 
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.btn141 {
+  background-color: #22B4CC;
+  margin-left: 4.5%;
+  width: 45%;
+  font-family: Oswald;
+}
+.btnBUY {
+  background-color: #5DF9AE;
+  width: 45%;
+  font-family: Oswald;
+}

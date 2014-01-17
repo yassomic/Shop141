@@ -6,13 +6,10 @@
         <div class="pricediv">
           <p class="price"><%= product.price %></p>
         </div>
-        <div class="productimagediv" style="text-align: center">
-          <%= link_to image_tag(product.img), product_path(product), :class => "productimage" %> 
+        <div>
+          <%= link_to image_tag(product.img), product_path(product) %> 
         </div>
       </div>
-
-
-    
   <% end %>
 
 
