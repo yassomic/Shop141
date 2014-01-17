@@ -1,11 +1,12 @@
 class Product < ActiveRecord::Base
 
   belongs_to :charity
+  has_many :payments
   
   # after_create :product_query
-  after_create :configure_item, :set_title_url_params, :set_price_pic_params, :set_title, :set_price, :set_picture
+  after_create :configure_item, :set_title_url_params, :set_price_pic_params, :set_title, :set_price, :set_picture, :set_url
 
- #method cals the Amazon API
+ #method calls the Amazon API
 
  def configure_item
   @req = Vacuum.new 
@@ -54,7 +55,12 @@ class Product < ActiveRecord::Base
   self.save
  end
 
-
+ def set_url
+  @url_res = @req.item_lookup(@title_url_params)
+  hash = @url_res.to_h
+  self.amazonUrl = hash["ItemLookupResponse"]["Items"]["Item"]["ItemLinks"]["ItemLink"][0]["URL"]
+  self.save
+ end
 
  # def product_query
  #    req = Vacuum.new 
