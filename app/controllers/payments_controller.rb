@@ -13,7 +13,6 @@ class PaymentsController < ApplicationController
     @payment.save
 
     if @payment.save
-
       redirect_to @payment.product.amazonUrl
       # redirect_to(@payment, :notice => 'Payment was successfully created.')
     else
