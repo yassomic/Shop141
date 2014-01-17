@@ -7,6 +7,34 @@ class Product < ActiveRecord::Base
   after_create :configure_item, :set_title_url_params, :set_price_pic_params, :set_title, :set_price, :set_picture, :set_url
 
  #method calls the Amazon API
+ def update_price
+     req = Vacuum.new 
+     req.configure(
+       aws_access_key_id: ENV['ACCESS_KEY_ID'],
+       aws_secret_access_key: ENV['SECRET_KEY'],
+       associate_tag: ENV['ASSOCIATES_ID']
+     )
+
+     req.associate_tag = 'shop1410f-20'
+
+     item_id = self.item_id
+
+     params = {
+       'IdType'        => 'ASIN',
+       'ItemId'        => item_id,
+       'ResponseGroup' => 'Offers, Images'
+     }
+
+   #For Product Price  
+     res = req.item_lookup(params)
+
+     hash = res.to_h
+     self.price = hash["ItemLookupResponse"]["Items"]["Item"]["Offers"]["Offer"]["OfferListing"]["Price"]["FormattedPrice"]
+ end
+
+
+
+ 
 
  def configure_item
   @req = Vacuum.new 
