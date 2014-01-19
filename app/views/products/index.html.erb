@@ -1,14 +1,28 @@
-  <% @products.each do |product| %>
 
-      <div class="card">
-        <div class="pricediv">
-          <p class="price"><%= product.price %></p>
+
+<div class="page-container">
+  <div class="row"> 
+     <% @products.each do |product| %>
+    <div class="large-4 columns card-padding">
+        <div class="card-container">
+          <div class="card">
+            
+            <div class="pricebox">
+              <p class="price"> <%= product.price %> </p>
+            </div>
+            <div class="card-inner">
+          <img src=<%= product.img %> class="proimage" />
+            </div>
+ 
+          </div>
         </div>
-        <div>
-          <%= link_to image_tag(product.img), product_path(product) %> 
-        </div>
-      </div>
-  <% end %>
+    </div>
+      <% end %>
+  </div>
+</div>
+
+
+
 
 
  
