@@ -8,11 +8,13 @@
   height: 420px;
   background-color: white;
   display: table;
+  box-shadow: 2px 2px 2px #B3B3B3;
 }
 
 .rscard {
   height: 420px;
   background-color: white;
+  box-shadow: 2px 2px 2px #B3B3B3;
 }
 
 .scard-container {
@@ -72,6 +74,7 @@
   font-family: Oswald;
   font-size: 30px;
   text-align: center;
+  line-height: 100%;
 }
 
 .desdiv {

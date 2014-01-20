@@ -6,7 +6,7 @@
        <div class="scard-container">
         <div class="scard">
           <div class="spricebox">
-            <span class="sprice"> $<span class="spanprice"><%= price = @product.price.tr('$', '').to_s %></span> <span class="pricespan"><%= @product.charity.name.upcase %> GETS HALF!</span>
+            <span class="sprice"> $<span class="spanprice"><%= price = @product.price.split(".")[0].tr('$', '').to_s %></span> <span class="pricespan"><%= @product.charity.name.upcase %> GETS HALF!</span>
             </span>
           </div>
 
@@ -20,11 +20,13 @@
       <div class="large-7 columns rscard">
        <div class="titlebox">
         <p class="titletext">
-        HERSCHEL BACKPACK
+          <%= @product.name.upcase %>
         </p>
        </div>
        <div class="desdiv">
-        <p class="des"> THIS MID-VOLUME BACKPACK IS INSPIRED BY CLASSIC MOUNTAINEERING AND IS CONSTRUCTED FOR MODERN FUNCTIONALITY.</p>
+        <p class="des">
+        This mid-volume backpack is inspired by classic mountaineering and is constructed for modern funcationality.
+        </p>
        </div>
        <div class="buybox">
         <%= link_to '<button class="button btnbuys" type="button">PURCHASE</button>'.html_safe, @product.amazonUrl %>
