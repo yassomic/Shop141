@@ -1,0 +1,149 @@
+.scard-page-container {
+  padding-left: 10%;
+  padding-right: 10%;
+  height: 600px;
+}
+
+.lscard {
+  height: 420px;
+  background-color: white;
+  display: table;
+}
+
+.rscard {
+  height: 420px;
+  background-color: white;
+}
+
+.scard-container {
+  height: 420px;
+  position: relative;
+  background-color: white;
+  overflow: hidden;
+  z-index: 20;
+}
+
+.scard {
+  display: table;
+  height: 100%;
+  width: 100%
+}
+
+.scard-inner {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.spricebox {
+  height: 50px;
+  width: 100px;
+  position: absolute;
+  background-color: #FF5351;
+  display: table;
+  margin-top: 15px;
+  z-index: 10;
+}
+
+.sprice {
+  display: table-cell;
+  vertical-align: middle;
+  color: white;
+  font-family: Oswald;
+  font-size: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.sproimage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 90%;
+  max-width: 90%; 
+}
+
+// rightside
+
+.titlebox {
+  margin-top: 10%;
+}
+
+.titletext {
+  font-family: Oswald;
+  font-size: 30px;
+  text-align: center;
+}
+
+.desdiv {
+  vertical-align: middle;
+  margin-top: 50px;
+  height: 80px;
+}
+
+.des {
+  font-family: Oswald;
+  color: dark-grey;
+  font-size: 25px;
+  line-height: 100%;
+  text-align: center;
+}
+
+.buybox {
+  margin-top: 25px;
+  height: 60px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.one4onebox {
+  height: 60px; 
+}
+
+.btnbuys {
+  height: 100%;
+  width: 100%;
+  font-size: 25px;
+  font-family: Oswald;
+  line-height: 100%;
+  background-color: #22B4CC;
+}
+
+.btnone4one {
+  height: 100%;
+  width: 100%;
+  font-size: 25px;
+  font-family: Oswald;
+  line-height: 100%;
+  background-color: #5DF9AE;
+}
+
+.pricespan {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

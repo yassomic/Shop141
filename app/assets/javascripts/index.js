@@ -1,7 +1,4 @@
 jQuery(document).ready(function($){
-
-    //portfolio - show link
-
     $('.fdw-background').hover(
         function () {
             $(this).animate({opacity:'1'}, 200);
@@ -11,3 +8,4 @@ jQuery(document).ready(function($){
         }
     ); 
 });
+
