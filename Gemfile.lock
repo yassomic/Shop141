@@ -68,6 +68,9 @@ GEM
     font-awesome-rails (4.0.3.1)
       railties (>= 3.2, < 5.0)
     formatador (0.2.4)
+    foundation-icons-sass-rails (3.0.0)
+      railties (>= 3.1.1)
+      sass-rails (>= 3.1.1)
     foundation-rails (5.0.2.0)
       railties (>= 3.1.0)
       sass (>= 3.2.0)
@@ -244,6 +247,7 @@ DEPENDENCIES
   faraday (~> 0.8.9)
   figaro
   font-awesome-rails
+  foundation-icons-sass-rails
   foundation-rails
   guard-rspec
   hirb

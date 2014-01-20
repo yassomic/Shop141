@@ -1,3 +1,33 @@
+<nav class="top-bar" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="#">SHOP141</a></h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="active"><a href="#">Right Button Active</a></li>
+      <li class="has-dropdown">
+        <a href="#">Right Button with Dropdown</a>
+        <ul class="dropdown">
+          <li><a href="#">First link in dropdown</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- Left Nav Section -->
+    <ul class="left">
+      <li><a href="#">Left Nav Button</a></li>
+      <li><a href="#">Left Nav Button</a></li>
+    </ul>
+  </section>
+</nav>
+
+
+
 <div class="scard-page-container">
   <div class="row">
       <div class="large-5 columns lscard">
@@ -6,6 +36,13 @@
           <div class="spricebox">
             <span class="sprice"> $<span class="spanprice"><%= price = @product.price.split(".")[0].tr('$', '').to_s %></span> <span class="pricespan"><%= @product.charity.name.upcase %> GETS HALF!</span>
             </span>
+          </div>
+          <div class="backbox">
+            <%= link_to products_path, class: "backlink" do %>
+             <!--  <i class="fa fa-long-arrow-left fa-4x"></i> -->
+             <i class="fi-arrow-left"></i>
+
+            <% end %>
           </div>
           <div class="scard-inner">
             <img src=<%= @product.img %> class="sproimage" />
@@ -20,11 +57,6 @@
           <%= @product.name.upcase %>
         </p>
        </div>
-       <div class="desdiv">
-        <p class="des">
-        This mid-volume backpack is inspired by classic mountaineering and is constructed for modern funcationality.
-        </p>
-       </div>
        <div class="buybox">
         <%= link_to '<button class="button btnbuys" type="button">PURCHASE</button>'.html_safe, @product.amazonUrl %>
        </div>
@@ -36,6 +68,13 @@
                   <button class="button btnone4one" type="submit">BUY 141</button>
           <% end %> 
        </div>
+
+       <div class="desdiv">
+        <p class="des">
+          <%= @product.description %>
+        </p>
+       </div>
+
       </div>
   </div>
 </div>

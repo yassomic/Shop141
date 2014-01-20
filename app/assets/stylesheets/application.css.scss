@@ -12,13 +12,18 @@
  *= require foundation_and_overrides
  *= require font-awesome
  *= require_self
+ //= require foundation_and_overrides
+
  *= require_tree .
 
  */
 
 /*********** page-wide *************/
+@import 'foundation-icons';
 @import url(http://fonts.googleapis.com/css?family=Oswald);
 @import url(http://fonts.googleapis.com/css?family=Arvo);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+@import url(http://fonts.googleapis.com/css?family=Lora);
 
 // .row {
 //   max-width: 100%;

@@ -57,6 +57,23 @@
   width: 100%;
 }
 
+.backbox {
+  height: 50px;
+  width: 100px;
+  position: absolute;
+  display: table;
+  margin-top: 365px;
+  z-index: 10;
+}
+
+.fa-long-arrow-left:hover {
+  text-decoration: none;
+}
+
+.arrow {
+  color: dark-grey;
+}
+
 .sproimage {
   display: block;
   margin-left: auto;
@@ -68,7 +85,7 @@
 // rightside
 
 .titlebox {
-  margin-top: 10%;
+  margin-top: 30px;
 }
 
 .titletext {
@@ -80,16 +97,16 @@
 
 .desdiv {
   vertical-align: middle;
-  margin-top: 50px;
+  margin-top: 20px;
   height: 80px;
 }
 
 .des {
-  font-family: Oswald;
+  font-family: Lora;
   color: dark-grey;
-  font-size: 25px;
+  font-size: 20px;
   line-height: 100%;
-  text-align: center;
+  text-align: left;
 }
 
 .buybox {
