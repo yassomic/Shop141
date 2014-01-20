@@ -2,19 +2,20 @@
   padding-left: 10%;
   padding-right: 10%;
   height: 600px;
+  padding-top: 60px;
 }
 
 .lscard {
   height: 420px;
   background-color: white;
   display: table;
-  box-shadow: 2px 2px 2px #B3B3B3;
+  // box-shadow: 2px 2px 2px #B3B3B3;
 }
 
 .rscard {
   height: 420px;
   background-color: white;
-  box-shadow: 2px 2px 2px #B3B3B3;
+  // box-shadow: 2px 2px 2px #B3B3B3;
 }
 
 .scard-container {
@@ -124,10 +125,9 @@
   display: none;
 }
 
-body {
-  background-color: #EAEBE7;
-  
-}
+// body {
+//   background-color: #EAEBE7;
+// }
 
 
 

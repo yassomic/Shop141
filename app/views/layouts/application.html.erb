@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title><%= content_for?(:title) ? yield(:title) : "SHOP141" %></title>
@@ -11,42 +10,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="home">
-    <div class="background">
-      <%= image_tag("141logo.png", :class => "logo") %> 
-      <div class="bancon">
-          <%= image_tag("banner.png", :class => "banner") %>
-          <p class="text"> Responsible Shopping <br></br>
-                          Radical Transformation</p>
-      </div>
-    </div>
-  </div>
-
-<!-- Nav Bar -->
-
-  <div class="bodybackground">
-    <div class="menu">
-      <div class="small-2 columns">
-        <p class="menulogo"> 
-          SHOP141 
-        </p>
-      </div>
-      <div class="small-10 columns">
-        <ul class="menulist">
-          <li>ABOUT</li>
-          <li>PRODUCTS</li>
-          <li>CHARITIES</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-
-<div class="row toppad">
+  <header>
+    <%= render 'layouts/navigation' %>
+  </header>
   
-</div> 
-
 <%= yield %>
+
+
 
 </body>
 </html>

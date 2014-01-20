@@ -17,6 +17,8 @@ class Product < ActiveRecord::Base
 
      req.associate_tag = 'shop1410f-20'
 
+     sleep(1.seconds)
+
      item_id = self.item_id
 
      params = {
@@ -24,7 +26,7 @@ class Product < ActiveRecord::Base
        'ItemId'        => item_id,
        'ResponseGroup' => 'Offers, Images'
      }
-
+     
    #For Product Price  
      res = req.item_lookup(params)
 
