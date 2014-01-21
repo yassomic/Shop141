@@ -32,6 +32,7 @@ class Product < ActiveRecord::Base
 
      hash = res.to_h
      self.price = hash["ItemLookupResponse"]["Items"]["Item"]["Offers"]["Offer"]["OfferListing"]["Price"]["FormattedPrice"]
+     self.save
  end
 
 

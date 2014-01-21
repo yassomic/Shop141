@@ -1,3 +1,75 @@
+.charity-page-top {
+  // background: url(fadeback.png) no-repeat center center; 
+  //   -webkit-background-size: cover;
+  //   -moz-background-size: cover;
+  //   -o-background-size: cover;
+  //   background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.charity-page-top:after {
+  border: solid;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: nonoe;
+  border-color: rgba(136, 183, 213, 0);
+  border-width: 15px;
+  margin-left: -15px;
+}
+
+.twitter {
+  float: left;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.sicon {
+  font-size: 30px;
+}
+
+.iconbox {
+  padding-left: 40%;
+  padding-right: 40%;
+  padding-bottom: 20px;
+}
+
+.charity-title-box {
+  padding-top: 30px;
+}
+
+.charity-title {
+  text-align: center;
+  font-family: Oswald;
+  font-size: 50px;
+}
+
+.charity-about-box {
+  height: 100%;
+  width: 100%;
+}
+
+.charity-paragraph {
+  font-family: Lora;
+  font-size: 18px;
+  height: 100%;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+.social-box {
+  height: 100%;
+}
+
+
+
+
+
+
+/******* product show  ***********/
+
 .scard-page-container {
   padding-left: 10%;
   padding-right: 10%;
@@ -66,13 +138,18 @@
   z-index: 10;
 }
 
-.fa-long-arrow-left:hover {
-  text-decoration: none;
+.large {
+  font-size: 50px;
+  line-height: 50px;
 }
 
-.arrow {
-  color: dark-grey;
-}
+// .fa-long-arrow-left:hover {
+//   text-decoration: none;
+// }
+
+// .arrow {
+//   color: dark-grey;
+// }
 
 .sproimage {
   display: block;
