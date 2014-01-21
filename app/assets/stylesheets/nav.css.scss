@@ -1,1 +1,45 @@
-nav.css.scss
+.top-bar {
+  background-color: #4D4D4D;
+  height: 65px;
+}
+
+ul {
+  background-color: #4D4D4D;
+}
+
+ul li a {
+   font-family: Oswald;
+   font-size: 20px;
+}
+
+.top-bar-section ul li > a {
+  font-family: Oswald;
+}
+
+.top-bar-section li a:not(.button) {
+  background-color: #4D4D4D;
+  margin-right: 100px;
+  text-align: center;
+}
+
+.top-bar-section li a:not(.button):hover {
+  background-color: #333333;
+}
+
+.top-bar-section ul li.active > a {
+  background-color: #4D4D4D;
+}
+
+a:hover {
+  background-color: #4D4D4D;
+}
+
+.top-bar .name h1 a {
+  padding-top: 11px;
+  font-size: 25px;
+  margin-left: 40px;
+}
+
+.rnav {
+  margin-left: 100px;
+}

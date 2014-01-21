@@ -1,14 +1,14 @@
-<nav class="top-bar" data-topbar>
+<!-- <nav class="top-bar" data-topbar>
   <ul class="title-area">
     <li class="name">
       <h1><a href="#">SHOP141 - <%= @charity.name %></a></h1>
     </li>
-    <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+    <li class="toggle-topbar menu-icon"><a href="#">Menu </a> </li>
   </ul>
 
-  <section class="top-bar-section">
+  <section class="top-bar-section"> -->
     <!-- Right Nav Section -->
-    <ul class="right">
+    <!-- <ul class="right">
       <li class="active"><a href="#">Right Button Active</a></li>
       <li class="has-dropdown">
         <a href="#">Right Button with Dropdown</a>
@@ -16,85 +16,62 @@
           <li><a href="#">First link in dropdown</a></li>
         </ul>
       </li>
-    </ul>
+    </ul> -->
 
     <!-- Left Nav Section -->
-    <ul class="left">
-      <li><a href="#">Left Nav Button</a></li>
-      <li><a href="#">Left Nav Button</a></li>
+   <!--  <ul class="left">
     </ul>
   </section>
-</nav>
+</nav> -->
 
 
-<div class="charity-page-top">
-  <div class="row">
-    <div class="large-12 columns charity-title-box">
-      <h1 class="charity-title"> <%= @charity.name.upcase %></h1>
-    </div>
-  </div>
-  <div class="row">
-    <div class="large-3 columns pad">
-    </div>
-    <div class="large-6 columns charity-about-box">
-      <p class="charity-paragraph">Bacon ipsum dolor sit amet tongue flank pork loin pork bacon short loin venison turducken ribeye shankle jerky beef ribs turkey boudin. Ham rump corned beef shank pancetta, boudin venison flank. Landjaeger kevin ham filet mignon chuck. Capicola bresaola strip steak beef chicken t-bone shoulder kevin ground round flank tri-tip. Swine porchetta bacon fatback jowl spare ribs ham flank ground round andouille short ribs.
-      </p>
-    </div>
-    <div class="large-3 columns pad">
-    </div>
-  </div>
-  <div class="row">
-    <div class="social-box">
-      <!-- <div class="small-3 columns pad2">
-        df
-      </div> -->
-      <div class="small-12 columns iconbox">
-        <div class="twitter">
-          <a href="#"> <i class="fi-home sicon"></i> </a>
-        </div>
-        <div class="twitter">
-          <a href="#"> <i class="fi-social-twitter sicon"></i> </a>
-        </div>
-        <div class="twitter">
-          <a href="#"> <i class="fi-social-facebook sicon"></i> </a>
-        </div>
-        <div class="twitter">
-          <a href="#" <i class="fi-social-instagram sicon"></i> </a>
-        </div>
+
+  <div class="charity-page-top">
+    <div class="row">
+      <div class="large-12 columns charity-title-box">
+        <h1 class="charity-title"> <%= @charity.name.upcase %></h1>
       </div>
-     <!--  <div class="small-3 columns pad2">
-        df
-      </div> -->
+    </div>
+    <div class="row">
+      <div class="large-3 columns pad">
+      </div>
+      <div class="large-6 columns charity-about-box">
+        <p class="charity-paragraph">Bacon ipsum dolor sit amet tongue flank pork loin pork bacon short loin venison turducken ribeye shankle jerky beef ribs turkey boudin. Ham rump corned beef shank pancetta, boudin venison flank. Landjaeger kevin ham filet mignon chuck. Capicola bresaola strip steak beef chicken t-bone shoulder kevin ground round flank tri-tip. Swine porchetta bacon fatback jowl spare ribs ham flank ground round andouille short ribs.
+        </p>
+      </div>
+      <div class="large-3 columns pad">
+      </div>
+    </div>
+    <div class="divider">
     </div>
   </div>
-</div>
 
+  
 
+  <div class="page-container">
+    <div class="row"> 
+       <% @charity.products.each do |product| %>
+      <div class="large-4 columns card-padding">
+          <div class="card-container">
+            
+             <div style="opacity: 0;" class="fdw-background">
+                <a href="/products/<%= product.id %>" class="biglink">
+                <h4><a href="#" style="color:white;"><!-- THE PURCHASE OF THIS ITEM BENEFITS 
+                  <%= product.charity.name.upcase %> -->
+                </a>
+                </h4>
+             </div>
 
-<div class="page-container">
-  <div class="row"> 
-     <% @charity.products.each do |product| %>
-    <div class="large-4 columns card-padding">
-        <div class="card-container">
-          
-           <div style="opacity: 0;" class="fdw-background">
-              <a href="/products/<%= product.id %>" class="biglink">
-              <h4><a href="#" style="color:white;"><!-- THE PURCHASE OF THIS ITEM BENEFITS 
-                <%= product.charity.name.upcase %> -->
-              </a>
-              </h4>
-           </div>
-
-          <div class="card">
-            <div class="pricebox">
-              <p class="price"> <%= product.price.split(".")[0] %> </p>
-            </div>
-            <div class="card-inner">
-          <img src=<%= product.img %> class="proimage" />
+            <div class="card">
+              <div class="pricebox">
+                <p class="price"> <%= product.price.split(".")[0] %> </p>
+              </div>
+              <div class="card-inner">
+            <img src=<%= product.img %> class="proimage" />
+              </div>
             </div>
           </div>
-        </div>
+      </div>
+        <% end %>
     </div>
-      <% end %>
   </div>
-</div>
