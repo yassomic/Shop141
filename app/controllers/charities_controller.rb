@@ -6,11 +6,7 @@ class CharitiesController < ApplicationController
   end
 
   def show 
-    if params[:name]
-      @charity = Charity.where(:name => params[:name]).take
-    else
-      @charity = Charity.find(params[:id])
-    end
+    @charity = Charity.friendly.find(params[:id])
   end
 
 

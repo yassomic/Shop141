@@ -13,9 +13,6 @@ Hack2::Application.routes.draw do
   end
   get 'confirm_payment' => 'payments#confirm'
 
-  get ":name" => 'charities#show'
-
- 
 
 end
 

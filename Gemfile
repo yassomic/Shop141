@@ -60,6 +60,7 @@ gem 'foundation-rails'
 gem 'font-awesome-rails'
 gem 'foundation-icons-sass-rails'
 gem 'nokogiri'
+gem 'friendly_id', '~> 5.0.0'
 
 
 
