@@ -38,7 +38,7 @@
             </span>
           </div>
           <div class="backbox">
-            <%= link_to products_path, class: "backlink" do %>
+            <%= link_to request.env['HTTP_REFERER'], class: "backlink" do %>
              <!--  <i class="fa fa-long-arrow-left fa-4x"></i> -->
              <i class="fi-arrow-left"></i>
 
