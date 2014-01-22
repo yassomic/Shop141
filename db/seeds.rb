@@ -30,7 +30,7 @@ sleep(5.second)
 blanket = compassion.products.create(description: "Wool, made in the USA by the foremost blanket maker, Pendleton. All four sides are bound in contrasting wool. This will serve to keep you warm through the cold winter days.", item_id: 'B002QIMYYO')
 puts "Created blanket!"
 
-sleep(1.second)
+sleep(5.second)
 
 wallet = compassion.products.create(description: "These beautiful wallets are individually hand made here in Springfield, MO from high quality, tough cowhide leather. They are hand-laced with super-strong akngaroo lace by the owner of Springfield Leather Company, Kevin Hopkins. The scary thing is that he laces them while he drives. And you thought texting was dangerous!", item_id: 'B005QDKLTG')
 puts "Created wallet!"
@@ -73,8 +73,8 @@ puts "Created stool!"
 
 sleep(5.second)
 
-chemex = forthehungry.products.create(description: "Known as a pristine coffeemaker, Chemex employs all of the chemically correct methods for brewing. Its hourglass shaped flask is made entirely of glass, a chemically inert material that does not absorb odors or chemical residues..", item_id: 'B0000YWF5E')
-puts "Created stool!"
+outdoor = forthehungry.products.create(description: "Both a fun read and a true resource of more than one hundred essential wilderness skills, this book is for readers of any age who love adventure, even from the comfort of an armchair.", item_id: '0789324776')
+puts "Created outdoor!"
 
 sleep(5.second)
 
