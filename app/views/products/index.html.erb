@@ -1,32 +1,41 @@
 <div class="index-page-top">
-
-  <div class="downarrowbox">
-    sgsdg
-  </div>
-
   <div class="navhead">
-    <div class="row">
-      <div class="large-12 columns index-title-box">
-        <h1 class="index-title"> SHOP141 </h1>
+    <div class="navrow">
+      <div class="row">
+        <div class="large-12 columns index-title-box">
+          <h1 id="indextitle"> SHOP141 </h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-12 columns navbox">
+          <div class="about">
+            <p><a href="/">ABOUT</a></p>
+          </div>
+          <div class="charities">
+            <p><a href="#" data-reveal-id="myModal">CHARITIES</a></p>
+          </div>
+        </div>  
+      </div>
+      <div class="index-divider">
       </div>
     </div>
-    <div class="row">
-      <div class="large-12 columns navbox">
-        <div class="about">
-          <p><a href="/">ABOUT</a></p>
-        </div>
-        <div class="charities">
-          <p><a href="#">CHARITIES</a></p>
-        </div>
-      </div>  
-    </div>
-
-
-    <div class="index-divider">
+    <div class="sparrow">
+      <a href="#"><%= image_tag("arrow.png", :class => "arrow") %> </a>
     </div>
   </div>
+</div>
 
-
+<div id="myModal" class="reveal-modal" data-reveal>
+  <div class="large-12 columns">
+    <h1 class="allcharities">SHOP 141 CHARITIES</h1>
+  </div>
+  <div class="large-6 columns">
+    <a href="charities/compassion-international"> <%= image_tag("compassionlink.png") %> </a>
+  </div>
+  <div class="large-6 columns">
+    <a href="charities/food-for-the-hungry"> <%= image_tag("hungrylink.png") %> </a>
+  </div>
+  <a class="close-reveal-modal">&#215;</a>
 </div>
 
 <div class="page-container">
@@ -56,20 +65,3 @@
       <% end %>
   </div>
 </div>
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-

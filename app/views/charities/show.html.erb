@@ -1,54 +1,58 @@
-<!-- <nav class="top-bar" data-topbar>
-  <ul class="title-area">
-    <li class="name">
-      <h1><a href="#">SHOP141 - <%= @charity.name %></a></h1>
-    </li>
-    <li class="toggle-topbar menu-icon"><a href="#">Menu </a> </li>
-  </ul>
-
-  <section class="top-bar-section"> -->
-    <!-- Right Nav Section -->
-    <!-- <ul class="right">
-      <li class="active"><a href="#">Right Button Active</a></li>
-      <li class="has-dropdown">
-        <a href="#">Right Button with Dropdown</a>
-        <ul class="dropdown">
-          <li><a href="#">First link in dropdown</a></li>
-        </ul>
-      </li>
-    </ul> -->
-
-    <!-- Left Nav Section -->
-   <!--  <ul class="left">
-    </ul>
-  </section>
-</nav> -->
+<!-- <div class="index-page-top">
+  <div class="navhead">
+    <div class="navrow">
+      <div class="row">
+        <div class="large-12 columns index-title-box">
+          <h1 id="indextitle"> SHOP141 </h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-12 columns navbox">
+          <div class="about">
+            <p><a href="/">ABOUT</a></p>
+          </div>
+          <div class="charities">
+            <p><a href="#">CHARITIES</a></p>
+          </div>
+        </div>  
+      </div>
+      <div class="index-divider">
+      </div>
+    </div>
+    <div class="sparrow">
+      <a href="#"><%= image_tag("arrow.png", :class => "arrow") %> </a>
+    </div>
+  </div>
+</div> -->
 
 
 
   <div class="charity-page-top">
-    <div class="row">
-      <div class="large-12 columns charity-title-box">
-        <h1 class="charity-title"> <%= @charity.name.upcase %></h1>
-      </div>
-    </div>
-    <div class="row">
-      <div class="large-3 columns pad">
-      </div>
-      <div class="large-6 columns charity-about-box">
-        <p class="charity-paragraph">Bacon ipsum dolor sit amet tongue flank pork loin pork bacon short loin venison turducken ribeye shankle jerky beef ribs turkey boudin. Ham rump corned beef shank pancetta, boudin venison flank. Landjaeger kevin ham filet mignon chuck. Capicola bresaola strip steak beef chicken t-bone shoulder kevin ground round flank tri-tip. Swine porchetta bacon fatback jowl spare ribs ham flank ground round andouille short ribs.
-        </p>
-      </div>
-      <div class="large-3 columns pad">
-      </div>
-    </div>
-    <div class="divider">
+    <div class="charnavhead">
+        <div class="row">
+          <div class="large-12 columns charity-title-box">
+            <h1 class="charity-title"> <%= @charity.name.upcase %></h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-3 columns pad">
+          </div>
+          <div class="large-6 columns charity-about-box">
+            <p class="charity-paragraph">Bacon ipsum dolor sit amet tongue flank pork loin pork bacon short loin venison turducken ribeye shankle jerky beef ribs turkey boudin. Ham rump corned beef shank pancetta, boudin venison flank. Landjaeger kevin ham filet mignon chuck. Capicola bresaola strip steak beef chicken t-bone shoulder kevin ground round flank tri-tip.
+
+            </p>
+          </div>
+          <div class="large-3 columns pad">
+          </div>
+        </div>
+        <div class="divider">
+        </div>
     </div>
   </div>
 
-  
 
-  <div class="page-container">
+
+  <div class="charity-page-container">
     <div class="row"> 
        <% @charity.products.each do |product| %>
       <div class="large-4 columns card-padding">

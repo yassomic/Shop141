@@ -1,19 +1,27 @@
-* {
-border: 1px solid red;
--moz-box-sizing: border-box;
--webkit-box-sizing: border-box;
-box-sizing: border-box;
-} 
+// * {
+// border: 1px solid red;
+// -moz-box-sizing: border-box;
+// -webkit-box-sizing: border-box;
+// box-sizing: border-box;
+// } 
 
+// a:hover {
+//   color: none;
+//   background-color: none;
+// }
+// a {
+//   color: none;
+//   background-color: none;
+// }
 
 /************* header/nav **************/
 
-.navhead {
+.navhead, .charnavhead {
  position: fixed;
  width: 100%;
  z-index: 10;
  background-color: #E8E9E5;
- margin-top: 0px;
+ margin-top: -5px;
 }
 
 .index-page-top {
@@ -29,7 +37,7 @@ box-sizing: border-box;
   margin-bottom: 0px;
 }
 
-.index-title {
+#indextitle {
   text-align: center;
   font-family: Oswald;
   font-size: 50px;
@@ -72,10 +80,17 @@ width: 60%;
 
 /********* top arrow ************/
 
-.downarrowbox {
-  
-
+.sparrow {
+  margin-top: -85px;
+  position: fixed;
+  margin-left: 15px;
+  display: hidden;
 }
+
+.arrow {
+  display: none;
+}
+
 
 /************* card styles ***************/
 .page-container {
