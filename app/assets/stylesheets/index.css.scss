@@ -1,18 +1,91 @@
-// * {
-// border: 1px solid red;
-// -moz-box-sizing: border-box;
-// -webkit-box-sizing: border-box;
-// box-sizing: border-box;
-// } 
+* {
+border: 1px solid red;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+} 
 
+
+/************* header/nav **************/
+
+.navhead {
+ position: fixed;
+ width: 100%;
+ z-index: 10;
+ background-color: #E8E9E5;
+ margin-top: 0px;
+}
+
+.index-page-top {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-color: #E8E9E5;
+}
+
+
+.index-title-box {
+  padding-top: 10px;
+  margin-bottom: 0px;
+}
+
+.index-title {
+  text-align: center;
+  font-family: Oswald;
+  font-size: 50px;
+  color: #4D4D4D;
+}
+
+.index-divider {
+background-color: #333333;
+margin-top: 0px;
+margin-bottom: 12px;
+height: 3px;
+margin-left: auto;
+margin-right: auto;
+width: 60%;
+}
+
+.about {
+  float: left;
+  margin-left: 23%;
+  width: 15%;
+  line-height: 0;
+
+}
+
+.charities p {
+  text-align: center;
+  font-family: Oswald;
+  line-height: 2;
+  margin-bottom: 0;
+  font-size: 20px;
+}
+
+.about p {
+  text-align: center;
+  font-family: Oswald;
+  line-height: 2;
+  margin-bottom: 0;
+  font-size: 20px;
+}
+
+/********* top arrow ************/
+
+.downarrowbox {
+  
+
+}
 
 /************* card styles ***************/
 .page-container {
   padding-left: 4%;
   padding-right: 4%;
   background-color: #EAEBE7;
-  padding-top: 50px;
+  padding-top: 180px;
   padding-bottom: 80px;
+  position: relative;
+  z-index: 5;
 }
 
 .card-padding {

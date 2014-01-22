@@ -36,13 +36,11 @@
             <span class="sprice"> $<span class="spanprice"><%= price = @product.price.split(".")[0].tr('$', '').to_s %></span> <span class="pricespan"><%= @product.charity.name.upcase %> GETS HALF!</span>
             </span>
           </div>
-          <div class="backbox">
+          <!-- <div class="backbox">
             <%= link_to request.env['HTTP_REFERER'], class: "backlink" do %>
-             <!--  <i class="fa fa-long-arrow-left fa-4x"></i> -->
              <i class="fi-arrow-left large"></i>
-
             <% end %>
-          </div>
+          </div> -->
           <div class="scard-inner">
             <img src=<%= @product.img %> class="sproimage" />
           </div>
@@ -74,8 +72,16 @@
         </p>
        </div>
 
+
+
+      </div>
+      <div class="backbox2">
+        <%= link_to request.env['HTTP_REFERER'], class: "backlink" do %>
+         <i class="fi-arrow-left large"></i>
+        <% end %>
       </div>
   </div>
+
 </div>
 
 
