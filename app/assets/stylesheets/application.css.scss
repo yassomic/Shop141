@@ -26,13 +26,82 @@
 // .columns {
 //   border: 1px solid green;
 // }
-.background {
-  background: url(uganda_travel-1.jpg) no-repeat center center; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  height: 800px;
+
+// parallax
+
+// body{font-family: 'Changa One', cursive;margin:0;padding:0}
+ 
+#home {
+background: url(uganda_travel-1.jpg);
+background-attachment: fixed;
+background-origin: initial;
+background-clip: initial;
+background-size: cover;
+background-repeat:no-repeat;
+background-position:100% 0;
+position:relative;
+height:1880px;
+}
+
+.home_content {
+  margin: 4% 15% 4% 15%;
+}
+
+#about {
+ 
+background: url(hands.jpg);
+background-attachment: fixed;
+background-origin: initial;
+background-clip: initial;
+background-size: cover;
+background-repeat:no-repeat;
+background-position:100% 0;
+position:relative;
+min-height:1080px;
+}
+
+.about_content {
+  margin: 4% 15% 4% 15%;
+}
+
+#blog {
+ 
+background: url(morocco1.jpg);
+background-attachment: fixed;
+background-origin: initial;
+background-clip: initial;
+background-size: cover;
+background-repeat:no-repeat;
+background-position:100% 0;
+position:relative;
+min-height:1080px;
+}
+
+.blog_content {
+  margin: 4% 15% 4% 15%;
+}
+
+#contact {
+ 
+background: url(products.jpg);
+background-attachment: fixed;
+background-origin: initial;
+background-clip: initial;
+background-size: cover;
+background-repeat:no-repeat;
+background-position:100% 0;
+position:relative;
+min-height:1080px;
+
+}
+
+.layer {
+    background-color: rgba(248, 247, 216, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .logo {
@@ -40,16 +109,12 @@
   margin-right: auto;
   margin-left: auto;
   display: block;
-  padding-top: 6%;
+  padding-top: 15%;
 }
 .banner {
   padding-top: 80px;
   height: 270px;
   width: 100%;
-}
-
-.bancon {
-  text-align: center;
 }
 
 .text {
@@ -59,47 +124,6 @@
   font-size: 40px;
   color: #EAEBE7;
   line-height: 30px;
+  text-align: center;
 }
 
-/*NAV*/
-
-.menu {
-  background-color: #FF5351;
-  height: 100px;
-  width: 100%;
-
-}
-
-.menulogo {
-  font-family: Oswald;
-  color: #EAEBE7;
-  font-size: 40px;
-  padding-top: 20px;
-  text-align: right;
-  padding-top: 35px;
-}
-
-.menulist {
-  list-style-type: none;
-  display: block;
-  padding-top: 35px;
-  padding-left: 80px;
-}
-
-.menulist li {
-  display: inline;
-  font-family: Oswald;
-  font-size: 20px;
-  margin-right: 40px;
-  color: #EAEBE7;
-}
-
-// Body
-.bodybackground {
-  height: 1000px;
-  background-color: #EAEBE7;
-}
-
-.toppad {
-  height: 100px;
-}
