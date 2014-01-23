@@ -79,7 +79,7 @@ puts "Created outdoor!"
 sleep(5.second)
 
 razor = forthehungry.products.create(description: "Straight Razor shaving is different then Modern Shaving in which razors are ready to shave. Straight Razor needs to be honed on stone and there after need a stropping on a leather strap to get them shave ready.", item_id: 'B003ZLZ77W')
-puts "Created stool!"
+puts "Created razor!"
 
 
 
