@@ -1,26 +1,59 @@
- <div class="row"> 
-  <div class="small-4 columns">
-    <div class="card2">
-      <div class="pricediv">
-        <p class="price"><%= @product.price %></p>
+
+<div class="scard-page-container">
+  <div class="row">
+      <div class="large-5 columns lscard">
+       <div class="scard-container">
+        <div class="scard">
+          <div class="spricebox">
+            <span class="sprice"> $<span class="spanprice"><%= price = @product.price.split(".")[0].tr('$', '').to_s %></span> <span class="pricespan"><%= @product.charity.name.upcase %> GETS HALF!</span>
+            </span>
+          </div>
+          <!-- <div class="backbox">
+            <%= link_to request.env['HTTP_REFERER'], class: "backlink" do %>
+             <i class="fi-arrow-left large"></i>
+            <% end %>
+          </div> -->
+          <div class="scard-inner">
+            <img src=<%= @product.img %> class="sproimage" />
+          </div>
+        </div>
+       </div>
       </div>
-      <div class="productimagediv" style = "text-align: center">
-        <img src=<%= @product.img %> />
+
+      <div class="large-7 columns rscard">
+       <div class="titlebox">
+        <p class="titletext">
+          <%= @product.name.upcase %>
+        </p>
+       </div>
+       <div class="buybox">
+        <%= link_to '<button class="button btnbuys" type="button">PURCHASE</button>'.html_safe, @product.amazonUrl %>
+       </div>
+       <div class="one4onebox">
+                <%= amazon_simple_pay_form_tag do %>
+                  <%= hidden_field_tag(:amount, @product.price.tr('$', '').to_f) %>
+                  <%= hidden_field_tag 'referenceId', @product.id %>
+                  <%= hidden_field_tag 'description', 'something else' %>
+                  <button class="button btnone4one" type="submit">BUY 141</button>
+          <% end %> 
+       </div>
+
+       <div class="desdiv">
+        <p class="des">
+          <%= @product.description %>
+        </p>
+       </div>
+
+
+
       </div>
-      <div class="buttondiv">
-        <%= link_to '<button class="button btnBUY" type="button">PURCHASE</button>'.html_safe, @product.amazonUrl %>
-        <%= amazon_simple_pay_form_tag do %>
-          <%= hidden_field_tag(:amount, @product.price.tr('$', '').to_f) %>
-          <%= hidden_field_tag 'referenceId', @product.id %>
-          <%= hidden_field_tag 'description', 'something else' %>
-          <button class="button btn141" type="submit">BUY 141</button>
-        <% end %> 
+      <div class="backbox2">
+        <%= link_to request.env['HTTP_REFERER'], class: "backlink" do %>
+         <i class="fi-arrow-left large"></i>
+        <% end %>
       </div>
-    </div>
   </div>
-  <div class="small-8 columns">
-    <div class="description">
-      <%=@product.description%>
-    </div>
-  </div>
+
 </div>
+
+

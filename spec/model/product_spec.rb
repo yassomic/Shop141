@@ -24,7 +24,7 @@ describe Product do
     end
 
     it 'contains price' do
-      expect(product.price).to eq '$84.99'
+      expect(product.current_price).to eq '$84.99'
     end
 
     it 'contains image' do
@@ -36,4 +36,31 @@ describe Product do
     end
   end
 
+  context 'when the updated price is lower than the previous price' do
+    let(:product) do
+      p = Product.create(item_id:'B0077BZ6GI', current_price:'$100.00')
+        p.update_price
+      end
+
+    it 'updates the product with the new price' do
+      expect(product.update_price).to eq '$65.00'
+    end
+
+  end
+
+
+
+
+
 end
+
+
+
+
+
+
+
+
+
+
+

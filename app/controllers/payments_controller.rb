@@ -1,9 +1,6 @@
 class PaymentsController < ApplicationController
   before_action :set_payment, only: [:show, :edit, :update, :destroy]
 
-
-
-
   def confirm
     @product = Product.find(params[:referenceId])
     @payment = @product.payments.new(

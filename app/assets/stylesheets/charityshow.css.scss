@@ -1,0 +1,51 @@
+.charity-page-top {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-color: #E8E9E5;
+}
+
+.charity-title-box {
+  padding-top: 30px;
+}
+
+.charity-title {
+  text-align: center;
+  font-family: Oswald;
+  font-size: 50px;
+  color: #4D4D4D;
+}
+
+.charity-about-box {
+  height: 100%;
+  width: 100%;
+}
+
+.charity-paragraph {
+  font-family: Lora;
+  font-size: 18px;
+  height: 100%;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+.divider {
+background-color: #333333;
+margin-top: 12px;
+margin-bottom: 12px;
+height: 3px;
+margin-left: auto;
+margin-right: auto;
+width: 60%;
+}
+
+.charity-page-container{
+  padding-left: 4%;
+  padding-right: 4%;
+  background-color: #EAEBE7;
+  padding-top: 15%;
+  padding-bottom: 80px;
+  position: relative;
+  z-index: 5;
+}
+

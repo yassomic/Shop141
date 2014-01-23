@@ -1,0 +1,81 @@
+<!-- <div class="index-page-top">
+  <div class="navhead">
+    <div class="navrow">
+      <div class="row">
+        <div class="large-12 columns index-title-box">
+          <h1 id="indextitle"> SHOP141 </h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-12 columns navbox">
+          <div class="about">
+            <p><a href="/">ABOUT</a></p>
+          </div>
+          <div class="charities">
+            <p><a href="#">CHARITIES</a></p>
+          </div>
+        </div>  
+      </div>
+      <div class="index-divider">
+      </div>
+    </div>
+    <div class="sparrow">
+      <a href="#"><%= image_tag("arrow.png", :class => "arrow") %> </a>
+    </div>
+  </div>
+</div> -->
+
+
+
+  <div class="charity-page-top">
+    <div class="charnavhead">
+        <div class="row">
+          <div class="large-12 columns charity-title-box">
+            <h1 class="charity-title"> <%= @charity.name.upcase %></h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-3 columns pad">
+          </div>
+          <div class="large-6 columns charity-about-box">
+            <p class="charity-paragraph">Bacon ipsum dolor sit amet tongue flank pork loin pork bacon short loin venison turducken ribeye shankle jerky beef ribs turkey boudin. Ham rump corned beef shank pancetta, boudin venison flank. Landjaeger kevin ham filet mignon chuck. Capicola bresaola strip steak beef chicken t-bone shoulder kevin ground round flank tri-tip.
+
+            </p>
+          </div>
+          <div class="large-3 columns pad">
+          </div>
+        </div>
+        <div class="divider">
+        </div>
+    </div>
+  </div>
+
+
+
+  <div class="charity-page-container">
+    <div class="row"> 
+       <% @charity.products.each do |product| %>
+      <div class="large-4 columns card-padding">
+          <div class="card-container">
+            
+             <div style="opacity: 0;" class="fdw-background">
+                <a href="/products/<%= product.id %>" class="biglink">
+                <h4><a href="#" style="color:white;"><!-- THE PURCHASE OF THIS ITEM BENEFITS 
+                  <%= product.charity.name.upcase %> -->
+                </a>
+                </h4>
+             </div>
+
+            <div class="card">
+              <div class="pricebox">
+                <p class="price"> <%= product.price.split(".")[0] %> </p>
+              </div>
+              <div class="card-inner">
+            <img src=<%= product.img %> class="proimage" />
+              </div>
+            </div>
+          </div>
+      </div>
+        <% end %>
+    </div>
+  </div>

@@ -1,19 +1,67 @@
-  <% @products.each do |product| %>
-
-      <div class="card">
-        <div class="pricediv">
-          <p class="price"><%= product.price %></p>
-        </div>
-        <div>
-          <%= link_to image_tag(product.img), product_path(product) %> 
+<div class="index-page-top">
+  <div class="navhead">
+    <div class="navrow">
+      <div class="row">
+        <div class="large-12 columns index-title-box">
+          <h1 id="indextitle"> SHOP141 </h1>
         </div>
       </div>
-  <% end %>
+      <div class="row">
+        <div class="large-12 columns navbox">
+          <div class="about">
+            <p><a href="/">ABOUT</a></p>
+          </div>
+          <div class="charities">
+            <p><a href="#" data-reveal-id="myModal">CHARITIES</a></p>
+          </div>
+        </div>  
+      </div>
+      <div class="index-divider">
+      </div>
+    </div>
+    <div class="sparrow">
+      <a href="#"><%= image_tag("arrow.png", :class => "arrow") %> </a>
+    </div>
+  </div>
+</div>
 
+<div id="myModal" class="reveal-modal" data-reveal>
+  <div class="large-12 columns">
+    <h1 class="allcharities">SHOP 141 CHARITIES</h1>
+  </div>
+  <div class="large-6 columns">
+    <a href="charities/compassion-international"> <%= image_tag("compassionlink.png") %> </a>
+  </div>
+  <div class="large-6 columns">
+    <a href="charities/food-for-the-hungry"> <%= image_tag("hungrylink.png") %> </a>
+  </div>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
 
+<div class="page-container">
+  <div class="row"> 
+     <% @products.each do |product| %>
+    <div class="large-4 columns card-padding">
+        <div class="card-container">
+          
+           <div style="opacity: 0;" class="fdw-background">
+              <a href="/products/<%= product.id %>" class="biglink">
+              <h4><a href="#" style="color:white;">THE PURCHASE OF THIS ITEM BENEFITS 
+                <%= product.charity.name.upcase %>
+              </a>
+              </h4>
+           </div>
 
-
-
-
-
-
+          <div class="card">
+            <div class="pricebox">
+              <p class="price"> <%= product.price.split(".")[0] %> </p>
+            </div>
+            <div class="card-inner">
+          <img src=<%= product.img %> class="proimage" />
+            </div>
+          </div>
+        </div>
+    </div>
+      <% end %>
+  </div>
+</div>

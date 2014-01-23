@@ -1,0 +1,196 @@
+/********** product show  ***********/
+
+.scard-page-container {
+  padding-left: 10%;
+  padding-right: 10%;
+  height: 700px;
+  padding-top: 60px;
+}
+
+.lscard {
+  height: 420px;
+  background-color: white;
+  display: table;
+  // box-shadow: 2px 2px 2px #B3B3B3;
+}
+
+.rscard {
+  height: 420px;
+  background-color: white;
+  // box-shadow: 2px 2px 2px #B3B3B3;
+}
+
+.scard-container {
+  height: 420px;
+  position: relative;
+  background-color: white;
+  overflow: hidden;
+  z-index: 20;
+}
+
+.scard {
+  display: table;
+  height: 100%;
+  width: 100%
+}
+
+.scard-inner {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+
+/******price********/
+
+.spricebox {
+  height: 50px;
+  width: 100px;
+  position: absolute;
+  background-color: #FF5351;
+  display: table;
+  margin-top: 15px;
+  z-index: 10;
+}
+
+.sprice {
+  display: table-cell;
+  vertical-align: middle;
+  color: white;
+  font-family: Oswald;
+  font-size: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.pricespan {
+  display: none;
+}
+
+
+/*****back-button*****/
+
+.backbox {
+  height: 50px;
+  width: 100px;
+  position: absolute;
+  display: table;
+  margin-top: 365px;
+  z-index: 10;
+}
+
+.backbox2 {
+  height: 50px;
+  width: 100px;
+  position: absolute;
+  display: table;
+  margin-top: 415px;
+  z-index: 10;
+}
+
+.large {
+  font-size: 50px;
+  line-height: 50px;
+}
+
+
+/******image******/
+
+.sproimage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 90%;
+  max-width: 90%; 
+}
+
+
+
+/******title******/
+
+.titlebox {
+  margin-top: 30px;
+}
+
+.titletext {
+  font-family: Oswald;
+  font-size: 30px;
+  text-align: center;
+  line-height: 100%;
+}
+
+
+/******description******/
+
+.desdiv {
+  vertical-align: middle;
+  margin-top: 20px;
+  height: 80px;
+}
+
+.des {
+  font-family: Lora;
+  color: dark-grey;
+  font-size: 20px;
+  line-height: 100%;
+  text-align: left;
+}
+
+
+/******buttons******/
+
+.buybox {
+  margin-top: 25px;
+  height: 60px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.one4onebox {
+  height: 60px; 
+}
+
+.btnbuys {
+  height: 100%;
+  width: 100%;
+  font-size: 25px;
+  font-family: Oswald;
+  line-height: 100%;
+  background-color: #22B4CC;
+}
+
+.btnone4one {
+  height: 100%;
+  width: 100%;
+  font-size: 25px;
+  font-family: Oswald;
+  line-height: 100%;
+  background-color: #5DF9AE;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

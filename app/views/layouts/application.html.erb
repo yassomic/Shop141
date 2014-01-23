@@ -1,46 +1,23 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title><%= content_for?(:title) ? yield(:title) : "SHOP141" %></title>
-  <%= stylesheet_link_tag "application", media: "all" %>
-  <%= javascript_include_tag "application" %>
- 
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <div class="home">
-    <div class="background">
-      <%= image_tag("141logo.png", :class => "logo") %> 
-      <div class="bancon">
-          <%= image_tag("banner.png", :class => "banner") %>
-          <p class="text"> Responsible Shopping <br></br>
-                          Radical Transformation</p>
-      </div>
-    </div>
-  </div>
+    <title><%= content_for?(:title) ? yield(:title) : "SHOP141" %></title>
 
-<!-- Nav Bar -->
-<div class="row">
-  <div class="bodybackground">
-    <div class="menu">
-      <div class="small-2 columns">
-      <p class="menulogo"> SHOP141 </p>
-      </div>
-      <div class="small-10 columns">
-        <ul class="menulist">
-          <li>ABOUT</li>
-          <li>PRODUCTS</li>
-          <li>CHARITIES</li>
-        </ul>
-      </div>
-    </div>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
 
-<div class="row toppad"></div> 
+  <body>
 
-<%= yield %>
+    <%= yield %>
+    <%= javascript_include_tag "application" %>
+  </body>
 
-</body>
+  <footer>
+    <%= render 'layouts/footer' %>
+  </footer>
 </html>
