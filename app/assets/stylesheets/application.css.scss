@@ -24,6 +24,21 @@
 .row {
   max-width: 100%;
 }
+
+a {
+  text-decoration: none;
+  color: none;
+}
+
+a:visited {
+  color: none; 
+}
+
+a:hover {
+  color: none;
+  background-color: none; 
+}
+
 // .columns {
 //   border: 1px solid green;
 // }
@@ -31,15 +46,15 @@
 // parallax
  
 #home {
-background: url(uganda_travel-1.jpg);
-background-attachment: fixed;
-background-origin: initial;
-background-clip: initial;
-background-size: cover;
-background-repeat:no-repeat;
-background-position:100% 0;
-position:relative;
-height:1880px;
+  background: url(uganda_travel-1.jpg);
+  background-attachment: fixed;
+  background-origin: initial;
+  background-clip: initial;
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-position:100% 0;
+  position:relative;
+  height:1880px;
 }
 
 .logo {
@@ -48,13 +63,12 @@ height:1880px;
 
 .logo2 {
   width: 330px;
-  margin-right: auto;
-  margin-left: auto;
+  text-align: center;
   display: block;
-  // padding-top: 15%;
-  // opacity: 1;
-
+  margin-left: auto;
+  margin-right: auto
 }
+
 .banner2 {
   padding-top: 80px;
   height: 270px;
@@ -66,16 +80,24 @@ height:1880px;
 }
 
 #about {
- 
-background: url(hands.jpg);
-background-attachment: fixed;
-background-origin: initial;
-background-clip: initial;
-background-size: cover;
-background-repeat:no-repeat;
-background-position:100% 0;
-position:relative;
-min-height:1080px;
+  background: url(hands.jpg);
+  background-attachment: fixed;
+  background-origin: initial;
+  background-clip: initial;
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-position:100% 0;
+  position:relative;
+  min-height:780px;
+}
+
+.layer_content1 {
+  font-family: 'Arvo';
+  font-size: 48px;
+  color: #663300;
+  margin: 8% 15% 4% 15%;
+  line-height: 2em;
+  font-weight: bold;
 }
 
 .about_content {
@@ -83,16 +105,25 @@ min-height:1080px;
 }
 
 #blog {
- 
-background: url(morocco1.jpg);
-background-attachment: fixed;
-background-origin: initial;
-background-clip: initial;
-background-size: cover;
-background-repeat:no-repeat;
-background-position:100% 0;
-position:relative;
-min-height:1080px;
+  background: url(morocco1.jpg);
+  background-attachment: fixed;
+  background-origin: initial;
+  background-clip: initial;
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-position:100% 0;
+  position:relative;
+  min-height:1080px;
+  padding-top: 200px;
+}
+
+.layer_content2 {
+  color: #CCFFFF;
+  font-family: 'Arvo';
+  font-size: 48px;
+  margin: 4% 48% 4% 6%;
+  line-height: 2em;
+  font-weight: bold;
 }
 
 .blog_content {
@@ -100,28 +131,37 @@ min-height:1080px;
 }
 
 #contact {
- 
-background: url(products.jpg);
-background-attachment: fixed;
-background-origin: initial;
-background-clip: initial;
-background-size: cover;
-background-repeat:no-repeat;
-background-position:100% 0;
-position:relative;
-min-height:1080px;
-
+  background: url(products.jpg);
+  background-attachment: fixed;
+  background-origin: initial;
+  background-clip: initial;
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-position:100% 0;
+  position:relative;
+  min-height:1080px;
 }
 
 .layer {
-    background-color: rgba(248, 247, 216, 0.7);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    font-family: 'Arvo';
-    font-size: 48px;
+  background-color: rgba(248, 247, 216, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+.layer_content3 {
+  font-family: 'Arvo';
+  font-size: 48px;
+  color: #003300;
+  margin: 4% 15% 4% 15%;
+  line-height: 2em;
+  margin-top: 20%;
 }
 
 .text {

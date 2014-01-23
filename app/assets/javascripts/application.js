@@ -39,7 +39,7 @@ var $window = $(window);
 $(document).ready(function(){
 
 function pulsate(element) {
-    $(element || this).animate({ opacity: 0.4 }, 3000, function() {
+    $(element || this).animate({ opacity: 0.4 }, 2000, function() {
         $(this).animate({ opacity: 1 }, 1000,  pulsate);
     });
 }
