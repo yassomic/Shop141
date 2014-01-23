@@ -1,4 +1,5 @@
 Hack2::Application.routes.draw do
+  devise_for :users
   resources :payments
 
   root "home#index"
