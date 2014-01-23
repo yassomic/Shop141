@@ -65,6 +65,8 @@ gem 'devise'
 
 gem 'activeadmin', github: 'gregbell/active_admin'
 
+gem 'cancan'
+
 
 
 # gem 'asin', '~> 1.0'

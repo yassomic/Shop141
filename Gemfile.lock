@@ -60,6 +60,7 @@ GEM
       thor
     builder (3.1.4)
     callsite (0.0.11)
+    cancan (1.6.10)
     celluloid (0.15.2)
       timers (~> 1.1.0)
     coderay (1.1.0)
@@ -299,6 +300,7 @@ DEPENDENCIES
   activeadmin!
   better_errors
   binding_of_caller
+  cancan
   coffee-rails (~> 4.0.0)
   database_cleaner
   devise
