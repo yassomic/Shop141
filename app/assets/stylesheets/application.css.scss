@@ -17,8 +17,9 @@
  */
 
 /*********** page-wide *************/
-@import url(http://fonts.googleapis.com/css?family=Oswald);
-@import url(http://fonts.googleapis.com/css?family=Arvo);
+@import url('http://fonts.googleapis.com/css?family=Oswald');
+@import url('http://fonts.googleapis.com/css?family=Arvo');
+@import url('http://fonts.googleapis.com/css?family=Open+Sans');
 
 .row {
   max-width: 100%;
@@ -28,8 +29,6 @@
 // }
 
 // parallax
-
-// body{font-family: 'Changa One', cursive;margin:0;padding:0}
  
 #home {
 background: url(uganda_travel-1.jpg);
@@ -41,6 +40,25 @@ background-repeat:no-repeat;
 background-position:100% 0;
 position:relative;
 height:1880px;
+}
+
+.logo {
+  padding-top: 15%;
+}
+
+.logo2 {
+  width: 330px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  // padding-top: 15%;
+  // opacity: 1;
+
+}
+.banner2 {
+  padding-top: 80px;
+  height: 270px;
+  width: 100%;
 }
 
 .home_content {
@@ -102,19 +120,8 @@ min-height:1080px;
     left: 0;
     width: 100%;
     height: 100%;
-}
-
-.logo {
-  width: 330px;
-  margin-right: auto;
-  margin-left: auto;
-  display: block;
-  padding-top: 15%;
-}
-.banner {
-  padding-top: 80px;
-  height: 270px;
-  width: 100%;
+    font-family: 'Arvo';
+    font-size: 48px;
 }
 
 .text {
