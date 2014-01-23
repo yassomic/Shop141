@@ -1,5 +1,4 @@
 class Product < ActiveRecord::Base
-
   belongs_to :charity
   has_many :payments
   
