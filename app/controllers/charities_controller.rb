@@ -27,6 +27,16 @@ class CharitiesController < ApplicationController
     redirect_to charity_path(@charity.slug)
   end
 
+  def edit
+    @charity = Charity.friendly.find(params[:id])
+  end
+
+  def update
+    @charity = Charity.friendly.find(params[:id])
+    @charity.update(charity_params)
+    redirect_to charity_path(@charity.slug)
+  end
+
 
   private
   def charity_params
