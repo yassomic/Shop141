@@ -5,9 +5,9 @@ class CharitiesController < ApplicationController
   end
 
   def show 
-    @user = User.find(params[:user_id])
-    @charity = @user.charity
-    # @charity = Charity.friendly.find(params[:id])
+    # @user = User.find(params[:user_id])
+    # @charity = @user.charity
+    @charity = Charity.friendly.find(params[:id])
   end
 
   def new
@@ -22,7 +22,8 @@ class CharitiesController < ApplicationController
     @user.charity = @charity
     @charity.save
     @user.save
-    redirect_to user_charity_path(@user.id, @charity.id)
+    # redirect_to user_charity_path(@user.id, @charity.id)
+    redirect_to charity_path(@charity.slug)
   end
 
 
