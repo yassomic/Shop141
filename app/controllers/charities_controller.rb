@@ -19,7 +19,7 @@ class CharitiesController < ApplicationController
 
   def create
     @user = User.find(params[:user_id])
-    @charity = Charity.new
+    @charity = Charity.new(charity_params)
     @user.charity = @charity
     @charity.save
     @user.save
@@ -35,6 +35,10 @@ class CharitiesController < ApplicationController
   #   redirect_to user_charity_path(@charity.id)
   # end
 
+  private
+  def charity_params
+    params.require(:charity).permit(:name, :description, :affiliate_id)
+  end
 
 
 end
