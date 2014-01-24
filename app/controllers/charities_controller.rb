@@ -20,6 +20,7 @@ class CharitiesController < ApplicationController
     @user = User.find(params[:user_id])
     @charity = Charity.new(charity_params)
     @user.charity = @charity
+    @charity.user = @user
     @charity.save
     @user.save
     # redirect_to user_charity_path(@user.id, @charity.id)

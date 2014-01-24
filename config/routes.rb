@@ -5,7 +5,10 @@ Hack2::Application.routes.draw do
   devise_for :users, :controllers => { :invitations => "users/invitations" }
 
 
-  resources :charities
+  resources :charities do
+    resources :products
+  end
+
   resources :users do
     resources :charities do
       resources :products 
@@ -19,6 +22,7 @@ Hack2::Application.routes.draw do
   get "/products/id" => "products#show_product"
 
   post "/users/:user_id/charities/new" => "charities#new"
+  post "/users/:user_id/charities/:charity_id/products/new" => "products#new"
 
   resources :products
 
