@@ -14,7 +14,6 @@ class CharitiesController < ApplicationController
     @user = User.find(params[:user_id])
     @charity = Charity.new
     @user.charity = @charity
-    # binding.pry
   end
 
   def create
@@ -23,17 +22,9 @@ class CharitiesController < ApplicationController
     @user.charity = @charity
     @charity.save
     @user.save
-    # binding.pry
-    redirect_to root_path
+    redirect_to user_charity_path(@user.id, @charity.id)
   end
 
-  # def create
-  #   @user = User.find(params[:user_id])
-  #   @charity = Charity.create
-  #   @user.charity = @charity
-  #   # @user.save
-  #   redirect_to user_charity_path(@charity.id)
-  # end
 
   private
   def charity_params
