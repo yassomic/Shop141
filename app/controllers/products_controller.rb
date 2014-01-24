@@ -37,6 +37,13 @@ class ProductsController < ApplicationController
     redirect_to charity_path(@charity.slug)
   end
 
+  def destroy 
+    @product = Product.find(params[:id])
+    @product.destroy
+    @charity = Charity.friendly.find(params[:charity_id])
+    redirect_to charity_path(@charity.slug)
+  end
+
   private
   def product_params
     params.require(:product).permit(:item_id, :description)

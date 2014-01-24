@@ -56,6 +56,12 @@
            <p><%= link_to 'Edit Product', edit_user_charity_product_path(@charity.id, @charity.slug, product.id) %> </p>
            <% else %>
            <% end %>
+
+
+          <% if current_user = product.charity.user %>
+           <%= link_to 'Delete Product', charity_product_path(@charity, product.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% else %>
+          <% end %>
       </div>
         <% end %>
     </div>
