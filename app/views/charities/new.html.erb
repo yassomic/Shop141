@@ -1,0 +1,15 @@
+
+
+<%= form_for [@user, @charity] do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %> <br />
+
+  <%= f.label :description %>
+  <%= f.text_field :description %> <br />
+
+  <%= f.label :affiliate_id %>
+  <%= f.text_field :affiliate_id %> <br />
+
+  <%= f.submit %>
+<% end %>
