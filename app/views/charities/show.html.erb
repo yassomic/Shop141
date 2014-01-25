@@ -2,12 +2,26 @@
     <div class="charnavhead">
         <div class="row">
 
+          <% if user_signed_in? && current_user == @charity.user %>
+            Logged in as <strong><%= current_user.email %></strong>
+            <%= link_to 'Edit profile', edit_user_registration_path %> |
+            <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+          <% else %>
+           <!--  <%= link_to "Sign up", new_user_registration_path %> |
+            <%= link_to "Login", new_user_session_path %> -->
+          <% end %>
+
+
         <!--   <% if current_user = @charity.user %>
             <h3> <%= link_to 'Edit Chairty', edit_user_charity_path(@charity.id, @charity.slug) %> </h3>
           <% else %>
           <% end %> -->
 
+
+        <% if current_user = @charity.user %>
           <a href="#" data-reveal-id="editCharityModal" data-reveal>Edit Charity</a>
+        <% else %>
+        <% end %>
 
           <div class="large-12 columns charity-title-box">
             <h1 class="charity-title"> <%= @charity.name.upcase %></h1>

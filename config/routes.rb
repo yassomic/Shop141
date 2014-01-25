@@ -2,8 +2,14 @@ Hack2::Application.routes.draw do
 
   # devise_for :users
 
+  
+
   devise_for :users, :controllers => { :invitations => "users/invitations" }
 
+
+  devise_scope :user do
+      get "/admin" => "devise/sessions#new"
+    end
 
   resources :charities do
     resources :products

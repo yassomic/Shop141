@@ -63,6 +63,7 @@ gem 'nokogiri'
 gem 'friendly_id', '~> 5.0.0'
 gem 'devise'
 gem 'devise_invitable'
+gem 'simple_form'
 
 
 

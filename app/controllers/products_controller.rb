@@ -22,11 +22,7 @@ class ProductsController < ApplicationController
     @charity = Charity.friendly.find(params[:charity_id])
     @product = @charity.products.new(product_params)
     @product.save
-    respond_to do |format|
-      format.html { redirect_to tasks_url }
-      format.js
-    end
-    # redirect_to charity_path(@charity.slug)
+    redirect_to charity_path(@charity.slug)
   end
 
   def edit
