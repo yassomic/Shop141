@@ -1,10 +1,14 @@
   <div class="charity-page-top">
     <div class="charnavhead">
         <div class="row">
-          <% if current_user = @charity.user %>
+
+        <!--   <% if current_user = @charity.user %>
             <h3> <%= link_to 'Edit Chairty', edit_user_charity_path(@charity.id, @charity.slug) %> </h3>
           <% else %>
-          <% end %>
+          <% end %> -->
+
+          <a href="#" data-reveal-id="editCharityModal" data-reveal>Edit Charity</a>
+
           <div class="large-12 columns charity-title-box">
             <h1 class="charity-title"> <%= @charity.name.upcase %></h1>
           </div>
@@ -14,9 +18,6 @@
           </div>
           <div class="large-6 columns charity-about-box">
             <p class="charity-paragraph"> <%= @charity.description %>
-
-              <!-- Bacon ipsum dolor sit amet tongue flank pork loin pork bacon short loin venison turducken ribeye shankle jerky beef ribs turkey boudin. Ham rump corned beef shank pancetta, boudin venison flank. Landjaeger kevin ham filet mignon chuck. Capicola bresaola strip steak beef chicken t-bone shoulder kevin ground round flank tri-tip. -->
-
             </p>
           </div>
           <div class="large-3 columns pad">
@@ -32,13 +33,29 @@
   </div>
 
 
+<div id="editCharityModal" class="reveal-modal" data-reveal>
+  <%= form_for [@user, @charity] do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %> <br />
+
+  <%= f.label :description %>
+  <%= f.text_field :description %> <br />
+
+  <%= f.label :affiliate_id %>
+  <%= f.text_field :affiliate_id %> <br />
+
+  <%= f.submit %>
+<% end %>
+<a class="close-reveal-modal">&#215;</a>
+</div>
+
 
   <div class="charity-page-container">
     <div class="row"> 
        <% @charity.products.each do |product| %>
       <div class="large-4 columns card-padding">
           <div class="card-container">
-            
              <div style="opacity: 0;" class="fdw-background">
                 <a href="/products/<%= product.id %>" class="biglink">
                 <h4><a href="#" style="color:white;"><!-- THE PURCHASE OF THIS ITEM BENEFITS 
@@ -46,7 +63,6 @@
                 </a>
                 </h4>
              </div>
-
             <div class="card">
               <div class="pricebox">
                 <p class="price"> <%= product.price.split(".")[0] %> </p>
@@ -60,7 +76,6 @@
            <p><%= link_to 'Edit Product', edit_user_charity_product_path(@charity.id, @charity.slug, product.id) %> </p>
            <% else %>
            <% end %>
-
 
           <% if current_user = product.charity.user %>
            <%= link_to 'Delete Product', charity_product_path(@charity, product.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>

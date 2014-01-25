@@ -14,6 +14,7 @@ class CharitiesController < ApplicationController
     @user = User.find(params[:user_id])
     @charity = Charity.new
     @user.charity = @charity
+    @product = @charity.products.new
   end
 
   def create
