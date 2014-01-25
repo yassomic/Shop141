@@ -22,7 +22,10 @@
         </p>
        </div>
        <div class="charitybox">
-        <p class="charityspons">This product benefits <%= @product.charity.name %> </p>
+        <p class="charityspons">
+          This product benefits
+          <%= link_to @product.charity.name, charity_path(@product.charity) %>
+         </p>
        </div>
        <div class="buybox">
         <%= link_to '<button class="button btnbuys" type="button">PURCHASE</button>'.html_safe, @product.amazonUrl %>
