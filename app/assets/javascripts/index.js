@@ -28,7 +28,7 @@ $(window).scroll(function(){
         $elem3.fadeTo("slow", 0.5);
         $elem4.fadeIn("slow");
         $elem5.fadeOut("medium");
-        $elem6.stop().animate({height: 0}, 300);
+        $elem6.stop().animate({height: 0}, 500);
         scrollState = 'scrolled';
 
     }       
@@ -36,8 +36,8 @@ $(window).scroll(function(){
         $elem1.stop().animate({marginBottom: '10px'}, 300);
         $elem3.fadeTo("slow", 1);
         $elem4.fadeOut("slow");
-        $elem5.fadeIn("medium");
-        $elem6.stop().animate({height: "100%"}, 300);
+        $elem5.fadeIn("slow");
+        $elem6.stop().animate({height: 100}, 500);
         scrollState = 'top';
     }
 });
