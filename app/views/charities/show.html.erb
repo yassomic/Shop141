@@ -1,28 +1,43 @@
+<% if user_signed_in? && current_user == @charity.user %>
+
+<nav class="top-bar" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="#"><%= @charity.name %> - Admin Dashboard</a></h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="active">  
+        <%= link_to new_user_charity_product_path(@charity.id, @charity.slug) do %> 
+          <i class="fi-plus"></i> Add New Product
+        <% end %>
+      </li>
+      <li class="has-dropdown">
+        <a href="#">Logged in as <%= current_user.email %> </a>
+        <ul class="dropdown">
+          <li> <%= link_to 'Edit admin account', edit_user_registration_path %> </li>
+          <li> <a href="#" data-reveal-id="editCharityModal" data-reveal>Edit Charity</a> </li>
+          <li> <%= link_to "Logout", destroy_user_session_path, method: :delete %> </li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- Left Nav Section -->
+  </section>
+</nav>  
+
+<% else %>
+<% end %>
+
+
+
   <div class="charity-page-top">
     <div class="charnavhead">
         <div class="row">
-
-          <% if user_signed_in? && current_user == @charity.user %>
-            Logged in as <strong><%= current_user.email %></strong>
-            <%= link_to 'Edit profile', edit_user_registration_path %> |
-            <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-          <% else %>
-           <!--  <%= link_to "Sign up", new_user_registration_path %> |
-            <%= link_to "Login", new_user_session_path %> -->
-          <% end %>
-
-
-        <!--   <% if current_user = @charity.user %>
-            <h3> <%= link_to 'Edit Chairty', edit_user_charity_path(@charity.id, @charity.slug) %> </h3>
-          <% else %>
-          <% end %> -->
-
-
-        <% if current_user = @charity.user %>
-          <a href="#" data-reveal-id="editCharityModal" data-reveal>Edit Charity</a>
-        <% else %>
-        <% end %>
-
           <div class="large-12 columns charity-title-box">
             <h1 class="charity-title"> <%= @charity.name.upcase %></h1>
           </div>
@@ -35,10 +50,6 @@
             </p>
           </div>
           <div class="large-3 columns pad">
-            <% if current_user = @charity.user %>
-            <h3> <%= link_to 'Add Product', new_user_charity_product_path(@charity.id, @charity.slug) %> </h3>
-            <% else %>
-            <% end %>
           </div>
         </div>
         <div class="divider">
@@ -47,22 +58,20 @@
   </div>
 
 
-<div id="editCharityModal" class="reveal-modal" data-reveal>
-  <%= form_for [@user, @charity] do |f| %>
-
-  <%= f.label :name %>
-  <%= f.text_field :name %> <br />
-
-  <%= f.label :description %>
-  <%= f.text_field :description %> <br />
-
-  <%= f.label :affiliate_id %>
-  <%= f.text_field :affiliate_id %> <br />
-
-  <%= f.submit %>
-<% end %>
-<a class="close-reveal-modal">&#215;</a>
-</div>
+                                <div id="editCharityModal" class="reveal-modal small" data-reveal>
+                                 
+                                      <%= form_for [@user, @charity] do |f| %>
+                                        <%= f.label :name %>
+                                        <%= f.text_field :name %> <br />
+                                        <%= f.label :description, "Description (250 character max)" %> 
+                                        <%= f.text_area :description %> <br />
+                                        <%= f.label :affiliate_id %>
+                                        <%= f.text_field :affiliate_id %> <br />
+                                        <%= f.submit "submit", :class => 'button' %>
+                                     <% end %>
+                                      <a class="close-reveal-modal">&#215;</a>
+                             
+                                </div>
 
 
   <div class="charity-page-container">
@@ -86,12 +95,10 @@
               </div>
             </div>
           </div>
-          <% if current_user = product.charity.user %>
-           <p><%= link_to 'Edit Product', edit_user_charity_product_path(@charity.id, @charity.slug, product.id) %> </p>
-           <% else %>
-           <% end %>
 
-          <% if current_user = product.charity.user %>
+          <% if user_signed_in? && current_user == product.charity.user %>
+           <p><%= link_to 'Edit Product', edit_user_charity_product_path(@charity.id, @charity.slug, product.id) %> </p>
+          
            <%= link_to 'Delete Product', charity_product_path(@charity, product.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
           <% else %>
           <% end %>

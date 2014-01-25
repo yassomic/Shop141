@@ -14,7 +14,7 @@ jQuery(document).ready(function($){
 /***** fading and dropping menu *****/ 
 $elem1 = $('.index-title-box');
 $elem2 = $('.navhead');
-$elem3 = $('.navrow, .charnavhead');
+$elem3 = $('.navrow');
 $elem4 = $('.arrow');
 $elem5 = $('.charity-paragraph');
 $elem6 = $('.charity-about-box');

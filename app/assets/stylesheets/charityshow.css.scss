@@ -1,3 +1,16 @@
+/****** top bar  *********/
+.top-bar {
+  height: 50px;
+}
+
+
+.charnavhead {
+width: 100%;
+z-index: 10;
+background-color: #E8E9E5;
+margin-top: -5px;
+}
+
 .charity-page-top {
   height: 100%;
   width: 100%;
@@ -43,9 +56,14 @@ width: 60%;
   padding-left: 4%;
   padding-right: 4%;
   background-color: #EAEBE7;
-  padding-top: 15%;
   padding-bottom: 80px;
   position: relative;
   z-index: 5;
+}
+
+/******* form **********/
+
+.charity-edit-form {
+  width: 400px;
 }
 
