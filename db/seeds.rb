@@ -6,10 +6,15 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-
+User.destroy_all
+puts "Destroyed all users."
 Product.destroy_all
+puts "Destroyed all products"
 Charity.destroy_all
-puts "Destroyed all products and charitites."
+puts "Destroyed all charitites."
+
+User.invite!(:email => "srhhayslip@gmail.com", :name => "Sarah Hayslip")
+puts "Invited Sarah to be a charity admin!"
 
 compassion = Charity.create({name: "Compassion International", img: "http://dribbletheworld.com/wp-content/uploads/2012/03/Compassion-International.jpg", description: "Compassion International is a Christian child sponsorship organization dedicated to the long-term development of children living in poverty around the world.", affiliate_id: 101
   })
@@ -78,8 +83,8 @@ puts "Created outdoor!"
 
 sleep(5.second)
 
-razor = forthehungry.products.create(description: "Straight Razor shaving is different then Modern Shaving in which razors are ready to shave. Straight Razor needs to be honed on stone and there after need a stropping on a leather strap to get them shave ready.", item_id: 'B003ZLZ77W')
-puts "Created stool!"
+soap = forthehungry.products.create(description: "Straight Razor shaving is different then Modern Shaving in which razors are ready to shave. Straight Razor needs to be honed on stone and there after need a stropping on a leather strap to get them shave ready.", item_id: 'B000Z601F8')
+puts "Created soap!"
 
 
 
