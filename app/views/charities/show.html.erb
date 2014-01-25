@@ -59,16 +59,18 @@
 
 
                                 <div id="editCharityModal" class="reveal-modal small" data-reveal>
-                                 
                                       <%= form_for [@user, @charity] do |f| %>
-                                        <%= f.label :name %>
+                                        <%= f.label :name, "Charity Name" %>
                                         <%= f.text_field :name %> <br />
-                                        <%= f.label :description, "Description (250 character max)" %> 
+                                        <%= f.label :description, "Description (250 character max)" %>
                                         <%= f.text_area :description %> <br />
-                                        <%= f.label :affiliate_id %>
+                                        <%= f.label :link, "Charity url (http://www.yourcharity.com)" %>
+                                        <%= f.text_field :link %> <br />
+
+                                        <%= f.label :affiliate_id, "Amazon Affiliate ID" %>
                                         <%= f.text_field :affiliate_id %> <br />
-                                        <%= f.submit "submit", :class => 'button' %>
-                                     <% end %>
+                                        <%= f.submit :class => 'button' %>
+                                      <% end %>
                                       <a class="close-reveal-modal">&#215;</a>
                              
                                 </div>
