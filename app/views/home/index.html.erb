@@ -6,7 +6,7 @@
 <body>
 
   <div id="home" class="bg_parralax" data-type="background" data-speed="10">
-    <div class="logo">
+    <div data-center="opacity: 1" data--200-top="opacity: 0" data-anchor-target=".logo2" class="logo">
       <%= link_to image_tag("141logo_v2.png", :class => "logo2"), '/products' %>
     </div>
     <div class="banner">
@@ -16,9 +16,16 @@
     </div>
   </div> 
 
-  <div class="home_content">
-    <h1><span>You are unique.<br></span><span style="font-size: 14px; font-weight: normal; line-height: 1.68em;"></span></h1><h3>(YES YOU!)</h3><p>Chances are you are coming to us in one of two positions:</p><ol id="yui_3_10_1_1_1390261516808_516"><li id="yui_3_10_1_1_1390261516808_515">You have a great idea you don't want someone to screw up.</li><li>You had a great idea that someone screwed up.&nbsp;</li></ol><p><em>SHOP141</em> exists to ensure that your brilliant product idea not only sees the light of day, but destroys the market on the other side. &nbsp;Your company's limited time, money, and resources are far too valuable to be pushed out on the market naked with a "marketable" explanation for why you have no clothes.&nbsp;</p><p>Whether this is your first attempt or, God forbid, your second or third...</p><h3><a href="/locations">It's time to do it right</a>.</h3><p><strong><em></em></strong></p><p></p><p>&nbsp;</p></div>
+  <div data-center="opacity: 1" data--200-top="opacity: 0" class="home_content">
+    <h1><span>You are unique.<br></span><span style="font-size: 14px; font-weight: normal; line-height: 1.68em;"></span></h1><h3>(YES YOU!)</h3><p>Chances are you are coming to us in one of two positions:</p><ol id="yui_3_10_1_1_1390261516808_516"><li id="yui_3_10_1_1_1390261516808_515">You have a great idea you don't want someone to screw up.</li><li>You had a great idea that someone screwed up.&nbsp;</li></ol>
   </div>
+  <div data-center="opacity: 1" data--200-top="opacity: 0" class="home_content">
+    <p><em>SHOP141</em> exists to ensure that your brilliant product idea not only sees the light of day, but destroys the market on the other side. &nbsp;Your company's limited time, money, and resources are far too valuable to be pushed out on the market naked with a "marketable" explanation for why you have no clothes.&nbsp;</p>
+  </div>
+
+    <p>Whether this is your first attempt or, God forbid, your second or third...</p><h3><a href="/locations">It's time to do it right</a>.</h3><p><strong><em></em></strong></p><p></p><p>&nbsp;</p></div>
+  </div>
+</div>
 
 
   <div id="about" class="bg_parralax" data-type="background" data-speed="20">
@@ -69,4 +76,8 @@
     </div>
   </div>
 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="js/skrollr.js"></script>
+<script src="js/_main.js"></script>
 </body>

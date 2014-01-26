@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require skrollr
 //= require foundation
 //= require_tree .
 
@@ -19,6 +20,15 @@
 
 
 // Parallax
+( function( $ ) {
+    // Init Skrollr
+    var s = skrollr.init({
+        render: function(data) {
+            //Debugging - Log the current scroll position.
+            //console.log(data.curTop);
+        }
+    });
+} )( jQuery );
 
 $(document).ready(function(){
 
@@ -39,43 +49,43 @@ var $window = $(window);
 
 // Pulsate Logo
 
-$(document).ready(function(){
+// $(document).ready(function(){
 
-function pulsate(element) {
-    $(element || this).animate({ opacity: 0.5 }, 1000, function() {
-        $(this).animate({ opacity: 1 }, 1000,  pulsate);
-    });
-}
+// function pulsate(element) {
+//     $(element || this).animate({ opacity: 0.5 }, 1000, function() {
+//         $(this).animate({ opacity: 1 }, 1000,  pulsate);
+//     });
+// }
 
-pulsate('.logo2');
+// pulsate('.logo2');
 
-});
+// });
 
 // Fade Logo and Banner
-$(document).ready(function(){
+// $(document).ready(function(){
 
-  $(window).scroll(function () {
-    $('[class="logo2"]').each(function () {
-      if (($(this).offset().top - $(window).scrollTop()) < 40) {
-	    $(this).stop().fadeTo('fast', 0);
-	  }  else {
-	      $(this).stop().fadeTo('fast', 1);
-	  }
-});
-});
-});
+//   $(window).scroll(function () {
+//     $('[class="logo2"]').each(function () {
+//       if (($(this).offset().top - $(window).scrollTop()) < 40) {
+// 	    $(this).stop().fadeTo('fast', 0);
+// 	  }  else {
+// 	      $(this).stop().fadeTo('fast', 1);
+// 	  }
+// });
+// });
+// });
 
-$(document).ready(function(){
+// $(document).ready(function(){
 
-  $(window).scroll(function () {
-    $('[class="banner"]').each(function () {
-      if (($(this).offset().top - $(window).scrollTop()) < 40) {
-	    $(this).stop().fadeTo('fast', 0);
-	  }  else {
-	      $(this).stop().fadeTo('fast', 1);
-	  }
-});
-});
-});
+//   $(window).scroll(function () {
+//     $('[class="banner"]').each(function () {
+//       if (($(this).offset().top - $(window).scrollTop()) < 40) {
+// 	    $(this).stop().fadeTo('fast', 0);
+// 	  }  else {
+// 	      $(this).stop().fadeTo('fast', 1);
+// 	  }
+// });
+// });
+// });
 
-$(document).foundation();
+// $(document).foundation();
