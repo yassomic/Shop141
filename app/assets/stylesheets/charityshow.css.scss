@@ -84,3 +84,14 @@ width: 60%;
   display: hidden;
   z-index: 20;
 }
+
+
+@media only screen and (max-width:900px)  {
+
+.charity-paragraph {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+}
+
