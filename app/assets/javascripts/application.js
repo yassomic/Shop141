@@ -47,19 +47,6 @@ var $window = $(window);
 	});
 });
 
-// Pulsate Logo
-
-$(document).ready(function(){
-
-function pulsate(element) {
-    $(element || this).animate({ opacity: 0.5 }, 1000, function() {
-        $(this).animate({ opacity: 1 }, 1000,  pulsate);
-    });
-}
-
-pulsate('.logo2');
-
-});
 
 
 
