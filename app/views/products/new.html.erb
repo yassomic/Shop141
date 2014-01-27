@@ -1,0 +1,10 @@
+<%= form_for [@charity, @product] do |f| %>
+
+<%= f.label :item_id %>
+<%= f.text_field :item_id %> <br />
+
+<%= f.label :description %>
+<%= f.text_field :description %> <br />
+
+<%= f.submit %>
+<% end %>

@@ -1,29 +1,37 @@
-<!-- <div class="index-page-top">
-  <div class="navhead">
-    <div class="navrow">
-      <div class="row">
-        <div class="large-12 columns index-title-box">
-          <h1 id="indextitle"> SHOP141 </h1>
-        </div>
-      </div>
-      <div class="row">
-        <div class="large-12 columns navbox">
-          <div class="about">
-            <p><a href="/">ABOUT</a></p>
-          </div>
-          <div class="charities">
-            <p><a href="#">CHARITIES</a></p>
-          </div>
-        </div>  
-      </div>
-      <div class="index-divider">
-      </div>
-    </div>
-    <div class="sparrow">
-      <a href="#"><%= image_tag("arrow.png", :class => "arrow") %> </a>
-    </div>
-  </div>
-</div> -->
+<% if user_signed_in? && current_user == @charity.user %>
+
+<nav class="top-bar" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="#"><%= @charity.name %> - Admin Dashboard</a></h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="active">  
+        <%= link_to new_user_charity_product_path(@charity.id, @charity.slug) do %> 
+          <i class="fi-plus"></i> Add New Product
+        <% end %>
+      </li>
+      <li class="has-dropdown">
+        <a href="#">Logged in as <%= current_user.email %> </a>
+        <ul class="dropdown">
+          <li> <%= link_to 'Edit admin account', edit_user_registration_path %> </li>
+          <li> <a href="#" data-reveal-id="editCharityModal" data-reveal>Edit Charity</a> </li>
+          <li> <%= link_to "Logout", destroy_user_session_path, method: :delete %> </li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- Left Nav Section -->
+  </section>
+</nav>  
+
+<% else %>
+<% end %>
 
 
 
@@ -38,18 +46,42 @@
           <div class="large-3 columns pad">
           </div>
           <div class="large-6 columns charity-about-box">
-            <p class="charity-paragraph">Bacon ipsum dolor sit amet tongue flank pork loin pork bacon short loin venison turducken ribeye shankle jerky beef ribs turkey boudin. Ham rump corned beef shank pancetta, boudin venison flank. Landjaeger kevin ham filet mignon chuck. Capicola bresaola strip steak beef chicken t-bone shoulder kevin ground round flank tri-tip.
-
+            <p class="charity-paragraph"> <%= @charity.description %>
             </p>
           </div>
           <div class="large-3 columns pad">
           </div>
         </div>
-        <div class="divider">
+        <div class="row">
+          <div class="medium-2 medium-centered columns">
+            <a href="<%= @charity.link %> " class="button [tiny small large] charitylink"> Website </a>
+          </div>
+          <div class="divider">
+          </div>
+        </div>
+        <div class="sparrow2">
+          <a href="#"><%= image_tag("arrow.png", :class => "arrow") %> </a>
         </div>
     </div>
   </div>
 
+
+                                <div id="editCharityModal" class="reveal-modal small" data-reveal>
+                                      <%= form_for [@user, @charity] do |f| %>
+                                        <%= f.label :name, "Charity Name" %>
+                                        <%= f.text_field :name %> <br />
+                                        <%= f.label :description, "Description (250 character max)" %>
+                                        <%= f.text_area :description %> <br />
+                                        <%= f.label :link, "Charity url (http://www.yourcharity.com)" %>
+                                        <%= f.text_field :link %> <br />
+
+                                        <%= f.label :affiliate_id, "Amazon Affiliate ID" %>
+                                        <%= f.text_field :affiliate_id %> <br />
+                                        <%= f.submit :class => 'button' %>
+                                      <% end %>
+                                      <a class="close-reveal-modal">&#215;</a>
+                             
+                                </div>
 
 
   <div class="charity-page-container">
@@ -57,7 +89,6 @@
        <% @charity.products.each do |product| %>
       <div class="large-4 columns card-padding">
           <div class="card-container">
-            
              <div style="opacity: 0;" class="fdw-background">
                 <a href="/products/<%= product.id %>" class="biglink">
                 <h4><a href="#" style="color:white;"><!-- THE PURCHASE OF THIS ITEM BENEFITS 
@@ -65,7 +96,6 @@
                 </a>
                 </h4>
              </div>
-
             <div class="card">
               <div class="pricebox">
                 <p class="price"> <%= product.price.split(".")[0] %> </p>
@@ -75,6 +105,22 @@
               </div>
             </div>
           </div>
+
+          <% if user_signed_in? && current_user == product.charity.user %>
+           <p><%= link_to edit_user_charity_product_path(@charity.id, @charity.slug, product.id) do %> 
+                  <i class="fi-pencil medium"></i>
+              <% end %>
+           
+          
+           <%= link_to charity_product_path(@charity, product.id), method: :delete, data: { confirm: 'Are you sure?' } do %>
+                <i class="fi-trash medium"></i>
+           <% end %>
+
+           </p>
+
+         </td>
+          <% else %>
+          <% end %>
       </div>
         <% end %>
     </div>

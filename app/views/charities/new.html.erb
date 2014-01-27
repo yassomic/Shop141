@@ -1,0 +1,31 @@
+<div class="form-page-wrap">
+  <h2 class="formtitle">SHOP141 Charity Admin Dashboard</h2>
+  <h3 class="formsubtitle">please set your password to register</h3>
+
+
+
+    <div class="row">
+              <div class="large-6 large-centered columns">
+                <div class="">
+                    <%= form_for [@user, @charity] do |f| %>
+
+                      <%= f.label :name, "Charity Name" %>
+                      <%= f.text_field :name %> <br />
+
+                      <%= f.label :description, "Description (250 character max)" %>
+                      <%= f.text_area :description %> <br />
+
+                      <%= f.label :link, "Charity url (http://www.yourcharity.com)" %>
+                      <%= f.text_field :link %> <br />
+
+                      <%= f.label :affiliate_id, "Amazon Affiliate ID" %>
+                      <%= f.text_field :affiliate_id %> <br />
+
+                      <%= f.submit :class => 'button' %>
+                    <% end %>
+                </div>
+              </div>
+    </div>
+    <div class="row bottom-pad">
+    </div>
+</div>

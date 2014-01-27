@@ -1,0 +1,16 @@
+<%= form_for [@user, @charity] do |f| %>
+
+  <%= f.label :name, "Charity Name" %>
+  <%= f.text_field :name %> <br />
+
+  <%= f.label :description, "Description (250 character max)" %>
+  <%= f.text_area :description %> <br />
+
+  <%= f.label :link, "Charity url (http://www.yourcharity.com)" %>
+  <%= f.text_area :link %> <br />
+
+  <%= f.label :affiliate_id, "Amazon Affiliate ID" %>
+  <%= f.text_field :affiliate_id %> <br />
+
+  <%= f.submit :class => 'button' %>
+<% end %>
