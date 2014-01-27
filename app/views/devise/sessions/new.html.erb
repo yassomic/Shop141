@@ -8,11 +8,10 @@
               <div class="large-6 large-centered columns">
                 <div class="">
                       <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-                        <div><%= f.label :email %><br />
-                        <%= f.email_field :email, :autofocus => true %></div>
 
-                        <div><%= f.label :password %><br />
-                        <%= f.password_field :password %></div>
+                        <%= f.input :email %>
+
+                        <%= f.input :password %>
 
                         <% if devise_mapping.rememberable? -%>
                           <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
