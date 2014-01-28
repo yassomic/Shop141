@@ -28,7 +28,7 @@
 
 .home-row {
   max-width: 100%;
-  margin-bottom: 0;
+  margin-bottom: -100px;
 }
 
 h3 , h1 , p {
@@ -56,7 +56,7 @@ h3 , h1 , p {
   background-repeat:no-repeat;
   background-position:100% 0;
   position:relative;
-  height:1680px;
+  height:1000px;
 
 }
 
@@ -80,35 +80,37 @@ h3 , h1 , p {
   margin-left: auto;
   margin-right: auto;
   font-size: 25px;
-  font-family: Arvo;
+  font-family: Oswald;
   line-height: 100%;
   background-color: #488B96;
   text-align: center;
   margin-top: 50px;
   opacity: 0.8;
-  border-style: ridge;
-  border-color: #33CCCC;
-  border-width: medium;
-  border-radius: 0.3em
+  // border-style: ridge;
+  // border-color: #33CCCC;
+  // border-width: medium;
+  // border-radius: 0.3em
 }
 
 .home_content {
   padding: 4% 15% 4% 15%;
-   background-color: #F2F2F2;
+   background-color: white;
 }
 
 .home_content h1 {
-  color: black;
+  color: #488B96;
+  // color: #333333;
   font-size: 38px;
-  font-family: Oswald;
-  font-weight: bold;
+  font-family: Source Sans Pro;
+  font-weight: 1000;
 }
 
 .home_content p {
-  color: #488B96;
+  // color: #488B96;
+  color: #333333;
   font-size: 28px;
-  font-family: Lora;
-  font-weight: bold;
+  font-family: Source Sans Pro;
+  font-weight: 400;
 }
 
 #about {
@@ -120,42 +122,71 @@ h3 , h1 , p {
   background-repeat:no-repeat;
   background-position:100% 0;
   position:relative;
-  height:1080px;
+  height:900px;
 }
 
+// .layer_content1 {
+//   color: #CCFFFF;
+//   font-family: 'Arvo';
+//   font-size: 48px;
+//   line-height: 4em;
+//   font-weight: bold;
+//   padding-top: 200px;
+//   margin-left: 50px;
+//   margin-right: 1000px;
+//   text-align: center;
+// }
+
 .layer_content1 {
-  color: #CCFFFF;
-  font-family: 'Arvo';
-  font-size: 48px;
-  line-height: 4em;
+  color: #E7E8E4;
+  font-family: Oswald;
+  font-size: 90px;
+  line-height: 2em;
   font-weight: bold;
   padding-top: 200px;
-  margin-left: 50px;
-  margin-right: 1000px;
-  text-align: center;
+  // margin-left: 50px;
+  margin-right: 500px;
+  text-align: left;
 }
 
 .about_content {
   margin: 4% 15% 4% 15%;
 }
 
-.about_content p {
+// .about_content p {
+//   color: #488B96;
+//   font-size: 28px;
+//   font-family: Lora;
+//   font-weight: bold;
+// }
+
+.abouttitle {
   color: #488B96;
   font-size: 28px;
-  font-family: Lora;
-  font-weight: bold;
+  font-family: Source Sans Pro;
+  font-weight: 800;
+  padding-bottom: 10px;
+  // font-size: italic;
 }
 
-.quote {
+.shopdirections {
   color: black;
-  font-size: 22px;
-  font-family: Lora;
-  font-weight: bold;
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-top: 50px;
-  line-height: 1.5em;
+  font-family: Source Sans Pro;
+  font-weight: 400;
+  font-size: 20px;
 }
+
+// .quote {
+//   color: black;
+//   font-size: 22px;
+//   font-family: Lora;
+//   font-weight: bold;
+//   padding-left: 100px;
+//   padding-right: 100px;
+//   padding-top: 50px;
+//   line-height: 1.5em;
+// }
+
 
 #conclusion {
   background: url(uganda_travel_blog_4-1.jpg);
@@ -166,24 +197,31 @@ h3 , h1 , p {
   background-repeat:no-repeat;
   background-position:100% 0;
   position:relative;
-  min-height:1080px;
+  // min-height:180px;
 }
 
 .layer_content2 {
-  font-family: 'Arvo';
-  font-size: 48px;
-  color: #CCFFFF;
+  font-family: Oswald;
+  font-size: 90px;
+  color: white;
   line-height: 2em;
   font-weight: bold;
-  padding-top: 400px;
+  padding-top: 100px;
   margin-left: 100px;
+  margin-right: 100px;
   text-align: center;
+  margin-bottom: 200px;
 }
 
-.layer_content2 span {
-  color: #990000;
-  font-weight: bold;
+.shopnowbutton {
+  margin-bottom: 100px;
+  padding-bottom: 200px;
 }
+
+// .layer_content2 span {
+//   color: #990000;
+//   font-weight: bold;
+// }
 
 .btn_container {
   padding-left: 70px;
