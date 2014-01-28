@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
+ruby '2.0.0'
 
 # Use postgresql
 gem 'pg'
 
 group :production do
-  gem 'ruby', '2.0.0'
   gem 'rails_12factor'
   gem 'rails_serve_static_assets'
 end
