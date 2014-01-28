@@ -51,7 +51,6 @@ class PaymentsController < ApplicationController
         format.html { render action: 'new' }
         # format.json { render json: @payment.errors, status: :unprocessable_entity }
       end
-    end
   end
 
   # PATCH/PUT /payments/1
