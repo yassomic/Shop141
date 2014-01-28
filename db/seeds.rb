@@ -26,8 +26,13 @@ puts "Created Herschel Backpack!"
 
 sleep(5.second)
 
-glass = compassion.products.create(description: "In the long and illustrious history of whisky, there has never been a single definitive glass that the whisky world could call its own. Wine, Champagne, Brandy, each has its own recognizable glass associated with it.", item_id: 'B003TMCNI8')
-puts "Created whiskey glass!"
+glass = compassion.products.create(description: "Normann Copenhagen are well known for their unique glassware, and this is just another masterpiece to add to the collection. This set of 2 designer whiskey glasses are sure to impress on any occasion, with their aesthetic form and serene feel. Ideal for dinner parties, board rooms and a fine gift for the discerning gentleman! The Normann Copenhagen Whiskey Glass combines elegance, pleasure and function in a simple, Nordic design.", item_id: 'B006D8C2VS')
+puts "Created glass!"
+
+sleep(5.second)
+
+iphonestand = compassion.products.create(description: "The elago W Stand holds the Apple iPhone 5 vertically or horizontally.  The stand is made of natural wood construction.", item_id: 'B00B4MUTMW')
+puts "Created beer iPhone stand!"
 
 sleep(5.second)
 
@@ -50,6 +55,17 @@ bulb = compassion.products.create(description: "These handcrafted, vintage bulbs
 puts "Created bulb!"
 
 sleep(5.second)
+
+bottle = compassion.products.create(description: "This Takeya Slim Glass Water Bottle features a high quality glass bottle with a wide mouth, and is encapsulated by a silicone jacket that provides a nice grip, as well as protection for the bottle. The sleeve has a see-through window for checking the liquid level. The twist-off cap is airtight and includes an easy carry loop.", item_id: 'B003DTLO32')
+puts "Created bottle!"
+
+sleep(5.second)
+
+bandages = compassion.products.create(description: "In fact “skin tone” is not skin tone for most people. It is just some odd combination of pink and brown that doesn’t really have any relationship to the color of skin. Rather than take an arbitrary guess at what skin tone your skin tone might be, we’ve decided to leave our bandages white. “Help I’ve cut myself” is 6 large bandages and 6 small bandages.", item_id: 'B004BYUQNW')
+puts "Created bandages!"
+
+sleep(5.second)
+
 
 forthehungry = Charity.create({name: "Food For the Hungry", description: "Food for the Hungry (FH) is a Christian organization serving the poor globally since 1971. We reflect the love of Christ in short-term emergency relief and long-term work to end world hunger. Learn about FH's vision, mission and values.", affiliate_id: 24689, link: "http://www.fh.org"})
 puts "Created charity Food For the Hungry"
@@ -76,13 +92,17 @@ puts "Created stool!"
 
 sleep(5.second)
 
-outdoor = forthehungry.products.create(description: "Both a fun read and a true resource of more than one hundred essential wilderness skills, this book is for readers of any age who love adventure, even from the comfort of an armchair.", item_id: '0789324776')
-puts "Created outdoor!"
+pencils = forthehungry.products.create(description: "These adorable rustic pencils are made from real tree branches, so each one is unique. Great for journal writing or sketching, but also great just to display.", item_id: 'B005659FP0')
+puts "Created colored pencils!"
 
 sleep(5.second)
 
 soap = forthehungry.products.create(description: "Straight Razor shaving is different then Modern Shaving in which razors are ready to shave. Straight Razor needs to be honed on stone and there after need a stropping on a leather strap to get them shave ready.", item_id: 'B000Z601F8')
 puts "Created soap!"
+
+
+
+
 
 
 

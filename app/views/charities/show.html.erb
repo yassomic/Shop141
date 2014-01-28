@@ -12,9 +12,7 @@
     <!-- Right Nav Section -->
     <ul class="right">
       <li class="active">  
-        <%= link_to new_user_charity_product_path(@charity.id, @charity.slug) do %> 
-          <i class="fi-plus"></i> Add New Product
-        <% end %>
+       <a href="#" data-reveal-id="addProductModal" data-reveal><i class="fi-plus"></i> Add New Product</a>
       </li>
       <li class="has-dropdown">
         <a href="#">Logged in as <%= current_user.email %> </a>
@@ -66,6 +64,21 @@
   </div>
 
 
+
+                                <div id="addProductModal" class="reveal-modal small" data-reveal>
+                                      <h3>To add a new product, <a href="http://www.amazon.com/" target="_blank">search Amazon </a> and add the product's ASIN number.</h3>
+                                      <%= image_tag("productadd.png", :class => "asin") %>
+                                
+                                      <%= form_for [@charity, Product.new] do |f| %>
+                                      <%= f.label :item_id, "ASIN Number" %>
+                                      <%= f.text_field :item_id %> <br />
+                                      <%= f.label :description %>
+                                      <%= f.text_area :description %> <br />
+                                      <%= f.submit "Add", :class => 'button' %>
+                                      <% end %>
+                                      <a class="close-reveal-modal">&#215;</a>
+                                </div>
+
                                 <div id="editCharityModal" class="reveal-modal small" data-reveal>
                                       <%= form_for [@user, @charity] do |f| %>
                                         <%= f.label :name, "Charity Name" %>
@@ -80,7 +93,6 @@
                                         <%= f.submit :class => 'button' %>
                                       <% end %>
                                       <a class="close-reveal-modal">&#215;</a>
-                             
                                 </div>
 
 
