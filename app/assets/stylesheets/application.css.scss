@@ -41,6 +41,11 @@ h3 , h1 , p {
 // }
 
 // parallax
+
+div .columns {
+  padding-left: 0;
+  padding-right: 0;
+}
  
 #home {
   background: url(uganda_travel-1.jpg);
@@ -69,7 +74,6 @@ h3 , h1 , p {
 
 .shopnow {
   height: 100%;
-  // width: 100%;
   text-align: center;
   display: block;
   margin-left: auto;
@@ -79,7 +83,7 @@ h3 , h1 , p {
   line-height: 100%;
   background-color: #488B96;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 150px;
   opacity: 0.8;
   border-style: ridge;
   border-color: #33CCCC;
@@ -91,32 +95,13 @@ h3 , h1 , p {
   margin: 4% 15% 4% 15%;
 }
 
+.home_content p {
+  color: #488B96;
+  font-size: 38px;
+  font-family: Oswald;
+}
+
 #about {
-  background: url(uganda_travel_blog_3-1.jpg);
-  background-attachment: fixed;
-  background-origin: initial;
-  background-clip: initial;
-  background-size: cover;
-  background-repeat:no-repeat;
-  background-position:100% 0;
-  position:relative;
-  min-height:780px;
-}
-
-.layer_content1 {
-  font-family: 'Arvo';
-  font-size: 48px;
-  color: #663300;
-  margin: 8% 15% 4% 15%;
-  line-height: 2em;
-  font-weight: bold;
-}
-
-.about_content {
-  margin: 0% 15% 0% 15%;
-}
-
-#blog {
   background: url(morocco1.jpg);
   background-attachment: fixed;
   background-origin: initial;
@@ -125,11 +110,10 @@ h3 , h1 , p {
   background-repeat:no-repeat;
   background-position:100% 0;
   position:relative;
-  min-height:1080px;
-  padding-top: 200px;
+  height:1080px;
 }
 
-.layer_content2 {
+.layer_content1 {
   color: #CCFFFF;
   font-family: 'Arvo';
   font-size: 48px;
@@ -138,11 +122,17 @@ h3 , h1 , p {
   font-weight: bold;
 }
 
-.blog_content {
+.about_content {
   margin: 4% 15% 4% 15%;
 }
 
-#contact {
+.about_content p {
+  color: #488B96;
+  font-size: 48px;
+  font-family: Lora;
+}
+
+#conclusion {
   background: url(uganda_travel_blog_4-1.jpg);
   background-attachment: fixed;
   background-origin: initial;
@@ -154,31 +144,21 @@ h3 , h1 , p {
   min-height:1080px;
 }
 
-.layer {
-  background-color: rgba(248, 247, 216, 0.7);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.layer_content3 {
+.layer_content2 {
   font-family: 'Arvo';
   font-size: 48px;
-  color: #003300;
-  margin: 4% 15% 4% 15%;
+  color: #CCFFFF;
   line-height: 2em;
-  margin-top: 20%;
+  font-weight: bold;
+  padding-top: 400px;
+  margin-left: 200px;
 }
 
-.text {
-  color: white;
-  margin-top: -140px;
-  font-family: Arvo;
-  font-size: 40px;
-  color: #EAEBE7;
-  line-height: 30px;
-  text-align: center;
+.layer_content2 span {
+  color: orange;
 }
 
+.btn_container {
+  padding-top: 150px;
+  padding-left: 100px;
+}
