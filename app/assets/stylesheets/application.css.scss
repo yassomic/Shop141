@@ -62,6 +62,7 @@ div .columns {
 
 .logo {
   padding-top: 15%;
+  padding-bottom: 100px;
 }
 
 .logo2 {
@@ -83,7 +84,7 @@ div .columns {
   line-height: 100%;
   background-color: #488B96;
   text-align: center;
-  margin-top: 150px;
+  margin-top: 50px;
   opacity: 0.8;
   border-style: ridge;
   border-color: #33CCCC;
@@ -92,13 +93,22 @@ div .columns {
 }
 
 .home_content {
-  margin: 4% 15% 4% 15%;
+  padding: 4% 15% 4% 15%;
+   background-color: #F2F2F2;
+}
+
+.home_content h1 {
+  color: black;
+  font-size: 38px;
+  font-family: Oswald;
+  font-weight: bold;
 }
 
 .home_content p {
   color: #488B96;
-  font-size: 38px;
-  font-family: Oswald;
+  font-size: 28px;
+  font-family: Lora;
+  font-weight: bold;
 }
 
 #about {
@@ -117,9 +127,12 @@ div .columns {
   color: #CCFFFF;
   font-family: 'Arvo';
   font-size: 48px;
-  margin: 4% 48% 4% 6%;
-  line-height: 2em;
+  line-height: 4em;
   font-weight: bold;
+  padding-top: 200px;
+  margin-left: 50px;
+  margin-right: 1000px;
+  text-align: center;
 }
 
 .about_content {
@@ -128,8 +141,20 @@ div .columns {
 
 .about_content p {
   color: #488B96;
-  font-size: 48px;
+  font-size: 28px;
   font-family: Lora;
+  font-weight: bold;
+}
+
+.quote {
+  color: black;
+  font-size: 22px;
+  font-family: Lora;
+  font-weight: bold;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 50px;
+  line-height: 1.5em;
 }
 
 #conclusion {
@@ -151,14 +176,15 @@ div .columns {
   line-height: 2em;
   font-weight: bold;
   padding-top: 400px;
-  margin-left: 200px;
+  margin-left: 100px;
+  text-align: center;
 }
 
 .layer_content2 span {
-  color: orange;
+  color: #990000;
+  font-weight: bold;
 }
 
 .btn_container {
-  padding-top: 150px;
-  padding-left: 100px;
+  padding-left: 70px;
 }
