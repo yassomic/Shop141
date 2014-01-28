@@ -26,7 +26,7 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
 @import url(http://fonts.googleapis.com/css?family=Lora);
 
-.row {
+.home-row {
   max-width: 100%;
   margin-bottom: 0;
 }
@@ -36,13 +36,13 @@ h3 , h1 , p {
   margin-bottom: 0 !important;
 }
 
-// .columns {
+// .home-columns {
 //   border: 1px solid green;
 // }
 
 // parallax
 
-div .columns {
+.home-columns {
   padding-left: 0;
   padding-right: 0;
 }
