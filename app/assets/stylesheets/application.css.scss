@@ -226,3 +226,20 @@ h3 , h1 , p {
 .btn_container {
   padding-left: 70px;
 }
+
+
+@media only screen and (max-width:947px) {
+
+.home_content, .about_content, .layer_content2, .home-row {
+  display: none;
+}
+
+#about {
+  display: none;
+}
+
+#home {
+  height: 800px;
+}
+
+}
