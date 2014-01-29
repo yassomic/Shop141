@@ -64,7 +64,6 @@ class PaymentsController < ApplicationController
         format.html { render action: 'edit' }
         # format.json { render json: @payment.errors, status: :unprocessable_entity }
       end
-    end
   end
 
   # DELETE /payments/1
