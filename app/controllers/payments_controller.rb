@@ -2,19 +2,18 @@ class PaymentsController < ApplicationController
   before_action :set_payment, only: [:show, :edit, :update, :destroy]
 
   def confirm
-    # Changed referenceID to reference_id. Also on index.html.erb
-    @product = Product.find(params[:reference_id])
+    @product = Product.find(params[:referenceId])
     @payment = @product.payments.new(
       :transaction_amount => params[:transactionAmount],
       :transaction_id     => params[:transactionId]
     )
-    # @payment.save
+    @payment.save
 
     if @payment.save
       redirect_to @payment.product.amazonUrl
       # redirect_to(@payment, :notice => 'Payment was successfully created.')
     else
-      redirect_to "index"
+      redirect_to :action => "index"
     end
   end
 
@@ -43,27 +42,29 @@ class PaymentsController < ApplicationController
   def create
     @payment = Payment.new(payment_params)
 
-    # respond_to do |format|
+    respond_to do |format|
       if @payment.save
         format.html { redirect_to @payment, notice: 'Payment was successfully created.' }
-        # format.json { render action: 'show', status: :created, location: @payment }
+        format.json { render action: 'show', status: :created, location: @payment }
       else
         format.html { render action: 'new' }
-        # format.json { render json: @payment.errors, status: :unprocessable_entity }
+        format.json { render json: @payment.errors, status: :unprocessable_entity }
       end
+    end
   end
 
   # PATCH/PUT /payments/1
   # PATCH/PUT /payments/1.json
   def update
-    # respond_to do |format| -- Do not need if we are never going to have a json response
+    respond_to do |format|
       if @payment.update(payment_params)
         format.html { redirect_to @payment, notice: 'Payment was successfully updated.' }
-        # format.json { head :no_content }
+        format.json { head :no_content }
       else
         format.html { render action: 'edit' }
-        # format.json { render json: @payment.errors, status: :unprocessable_entity }
+        format.json { render json: @payment.errors, status: :unprocessable_entity }
       end
+    end
   end
 
   # DELETE /payments/1
