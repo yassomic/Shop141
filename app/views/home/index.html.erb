@@ -1,20 +1,16 @@
 <div class="home">
   <div class="background">
     <%= image_tag("141logo.png", :class => "smalllogo") %> 
-    <%= link_to '<button class="shopnow" type="button">SHOP NOW</button>'.html_safe, '/products' %>
+
+
+      <div data-center="opacity: 1" data--20-top="opacity: 0" class="skrollable skrollable-before" style="opacity: 1;">
+          <a href="/products"><button class="shopnow" type="button">SHOP NOW</button></a>
+      </div>
+    <!-- <%= link_to '<button class="shopsmall" type="button">SHOP NOW</button>'.html_safe, '/products' %> -->
     <div class="bancon">
-        <%= image_tag("banner.png", :class => "banner") %>
-        <p class="text"> Responsible Shopping <br></br>
-                        Radical Transformation</p>
     </div>
   </div>
 </div>
-
-
-
-
-
-
 
 
 

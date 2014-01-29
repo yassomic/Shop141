@@ -227,65 +227,71 @@ h3 , h1 , p {
   padding-left: 70px;
 }
 
-.smalllogo {
+.home {
   display: none;
 }
-
-.banner {
-  display: none;
-}
-
-.bancon {
-  display: none;
-}
-
 
 
 @media only screen and (max-width:947px) {
 
-.home_content, .about_content, .layer_content2, .home-row, .bg_parralax {
-  display: none;
-}
+  .home_content, .about_content, .layer_content2, .home-row, .bg_parralax {
+    display: none;
+  }
 
-#about {
-  display: none;
-}
+  #about {
+    display: none;
+  }
 
-#home {
-  height: 800px;
-}
+  #home {
+    height: 800px;
+  }
 
-//// *** orig **** ////////
+  .home {
+    display: block;
+  }
 
-.background {
-  display: show;
-  background: url(uganda_travel-1.jpg) no-repeat center center; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  height: 800px;
-}
+  .background {
+    background: url(uganda_travel-1.jpg) no-repeat center center; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    height: 800px;
+  }
 
-.smalllogo {
+  .smalllogo {
   width: 330px;
   margin-right: auto;
   margin-left: auto;
   display: block;
   padding-top: 6%;
-}
+  }
 
-.banner {
+  .bancon {
+    text-align: center;
+  }
+
+  .banner {
   padding-top: 80px;
   height: 270px;
   width: 100%;
-}
+  }
 
-.bancon {
+  .shopsmall {
+  margin-bottom: 100px;
+  padding-bottom: 200px;
+  height: 100%;
   text-align: center;
-}
-
-
-
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 25px;
+  font-family: Oswald;
+  line-height: 100%;
+  background-color: #488B96;
+  text-align: center;
+  margin-top: 50px;
+  opacity: 0.8;
+  }
 
 }
