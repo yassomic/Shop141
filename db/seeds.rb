@@ -15,7 +15,7 @@ puts "Destroyed all charitites."
 
 User.invite!(:email => "srhhayslip@gmail.com", :name => "Sarah Hayslip")
 puts "Invited Sarah to be a charity admin!"
-
+puts "Adding Charities and Products, this will take awhile (because Amazon sucks)."
 compassion = Charity.create({name: "Compassion International", img: "http://dribbletheworld.com/wp-content/uploads/2012/03/Compassion-International.jpg", description: "Compassion International is a Christian child sponsorship organization dedicated to the long-term development of children living in poverty around the world.", affiliate_id: 12345, link: "http://www.compassion.com"})
 puts "Created charity Compassion-International"
 

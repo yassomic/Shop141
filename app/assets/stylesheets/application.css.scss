@@ -227,10 +227,23 @@ h3 , h1 , p {
   padding-left: 70px;
 }
 
+.smalllogo {
+  display: none;
+}
+
+.banner {
+  display: none;
+}
+
+.bancon {
+  display: none;
+}
+
+
 
 @media only screen and (max-width:947px) {
 
-.home_content, .about_content, .layer_content2, .home-row {
+.home_content, .about_content, .layer_content2, .home-row, .bg_parralax {
   display: none;
 }
 
@@ -241,5 +254,38 @@ h3 , h1 , p {
 #home {
   height: 800px;
 }
+
+//// *** orig **** ////////
+
+.background {
+  display: show;
+  background: url(uganda_travel-1.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  height: 800px;
+}
+
+.smalllogo {
+  width: 330px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  padding-top: 6%;
+}
+
+.banner {
+  padding-top: 80px;
+  height: 270px;
+  width: 100%;
+}
+
+.bancon {
+  text-align: center;
+}
+
+
+
 
 }
