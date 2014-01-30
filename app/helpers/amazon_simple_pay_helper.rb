@@ -14,7 +14,7 @@ module AmazonSimplePayHelper
     output.safe_concat(hidden_field_tag('immediateReturn', '1'))
     output.safe_concat(hidden_field_tag('processImmediate', '1'))
     output.safe_concat(hidden_field_tag('cobrandingStyle', 'logo'))
-    output.safe_concat(hidden_field_tag('returnUrl', confirm_payment_url))
+    output.safe_concat(hidden_field_tag('http://shop141-dev.herokuapp.com/', confirm_payment_url))
     output.safe_concat("</form>")
   end
 
